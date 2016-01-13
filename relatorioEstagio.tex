@@ -1,0 +1,309 @@
+\documentclass[12pt,a4paper]{article}
+
+% estes dois inputenc são para o mac conseguir ler os acentos gráficos em portugues
+% mas apenas o utf8 funciona no meu computador
+%\usepackage[applemac]{inputenc}
+%\usepackage[utf8]{inputenc}
+% \usepackage[portuges,brazilian]{babel}
+
+% esse inputenc é para o windows ler os acentos gráficos, e não funciona no mac
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{lmodern}
+
+%package para fazer figuras a e b automaticamente
+\usepackage{subfigure}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+%appendix
+\usepackage[title,titletoc,toc]{appendix}
+
+\usepackage{titlesec}
+\titleformat{\paragraph}[runin]{\normalfont\normalsize\itshape}{\theparagraph}{}{}[.] %format paragraph italic and ser a period after it
+\titlespacing{\paragraph}{0pt}{0pt}{*1} %remove spacing and add one characterspace after paragraph
+
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%esse package é para fazer multirow nas tabelas
+\usepackage{multirow}
+
+\usepackage{sidecap}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=2.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+%\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{calc}
+\usepackage{titletoc}
+\usepackage{indentfirst}
+\usepackage{pifont}
+\usepackage{hyperref}
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=blue,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+%para colocar superscript na esquerda
+\usepackage{leftidx}% http://ctan.org/pkg/leftidx
+
+\usepackage{listings} % package para escrever codigo no texto
+
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+%\lstset{frame=tb,
+%  language=Matlab,
+%  aboveskip=3mm,
+%  belowskip=3mm,
+%  showstringspaces=false,
+%  columns=flexible,
+%  basicstyle={\small\ttfamily},
+%  numbers=none,
+%  numberstyle=\tiny\color{gray},
+%  keywordstyle=\color{blue},
+%  commentstyle=\color{dkgreen},
+%  stringstyle=\color{mauve},
+%  breaklines=true,
+%  breakatwhitespace=true
+%  tabsize=3
+%}
+
+\lstset{ %
+  language=R,                     % the language of the code
+  basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{blue},      % keyword style
+  commentstyle=\color{dkgreen},   % comment style
+  stringstyle=\color{mauve},      % string literal style
+  escapeinside={\%*}{*)},         % if you want to add a comment within your code
+  morekeywords={*,...}            % if you want to add more keywords to the set
+} 
+
+% para incluir arquivos pdf, usando o comando \includepdf
+\usepackage{pdfpages}
+\usepackage{authblk}
+\usepackage{siunitx}
+
+\usepackage{mhchem} %used to write chemical formulas
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+\baselineskip0.75cm
+\parindent = 1cm
+\parskip = 0.5cm
+\addtolength{\skip\footins}{1cm}
+
+\usepackage{graphicx}
+
+%macros para gerar o r cursivo do griffiths
+\def\rcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=25mm,
+ right=25mm,
+ top=25mm,
+ bottom=25mm,
+ }
+ 
+ %package para escrever comentarios
+%\usepackage[portuguese,textwidth=3.5cm,textsize=small]{todonotes}%antes de publicar colocar como opçao [disable] para apagar todos os comentarios
+%\usepackage[utf8]{inputenc} 
+%\usepackage[textwidth=1.5cm,textsize=small]{todonotes}%antes de publicar colocar como opçao [disable] para apagar todos os comentarios
+
+\usepackage{xargs}                      % Use more than one optional parameter in a new commands
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=footnotesize]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+ 
+ 
+%don't want date printed
+\date{}
+\title{\Large \bf Estagio na telvo}
+\author[1]{\bf R. S. Grisotto}
+\author[1]{\bf T. Borges}
+\affil[1]{Instituto de Ciências Exatas e Tecnológicas (ICET),  Universidade Federal de Goiás
+  (UFG)\\
+  Jataí -- GO, Brazil}
+\affil[ ]{\textit {e-mail: rafaelgrisotto@gmail.com}}
+
+
+\renewcommand\Authands{ e }
+
+
+
+\begin{document} 
+ \maketitle
+
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+%\vspace*{1cm}
+
+
+
+
+
+     
+\begin{abstract}
+ 
+\textit{Estudamos o coeficiente de transmissão e a potência transmitida (do inglês frblabla.}
+  \\ \\
+  \textit{\textbf{Palavras chaves}}: \normalfont estagio haha haha
+\end{abstract}
+
+
+
+
+\section{Introdução}
+
+Descrever como a Telvo trabalha, seus projetos, suas áreas de atuação.
+
+Outra parte é descrever o problema da arquitetura para o sistema das máquinas pos.
+
+
+%\begin{figure}
+%\centering
+%\subfigure{a)
+%\includegraphics[width=1.9 in]{figuras/SMScopy.pdf}
+%\label{SMScopy}
+%}
+%\subfigure{b)
+%
+%\includegraphics[width=1.6 in]{figuras/deltaxy.pdf}
+%\label{deltax}
+%}
+%\caption{\subref{SMScopy} Diagrama esquemático para a estrutura do sensor SMS. A fibra SMF são as extremidades verdes, a fibra MMF é o retângulo azul / vermelho de comprimento $L$, onde a parte vermelha é o comprimento aquecido $r$.\subref{deltax} Ilustração do desalinhamento transversal entre as duas fibras no plano $xy$. O pequeno circulo vermelho (raio $a$) é o núcleo da fibra SMF e o grande circulo azul (raio $b$)  é o núcleo da fibra MMF. O deslocamento entre as duas fibras é $\vec{d} = \hat{i}\Delta x + \hat{j}\Delta y $.}
+%\label{modelo}
+%\end{figure}
+
+
+
+
+\subsection{aa aa}
+
+
+
+
+
+
+
+
+%
+%\begin{figure}[h!]
+%\centering
+%\subfigure{a)
+%\includegraphics[width=1.4 in]{figuras/E1.pdf}
+%\label{E1}
+%}
+%\subfigure{b)
+%\includegraphics[width=1.4 in]{figuras/E2.pdf}
+%\label{E2}
+%}
+%\subfigure{c)
+%\includegraphics[width=1.4 in]{figuras/E3.pdf}
+%\label{E3}
+%} \\
+%\subfigure{d)
+%\includegraphics[width=1.4 in]{figuras/E4.pdf}
+%\label{E4}
+%} 
+%\subfigure{e)
+%\includegraphics[width=1.4 in]{figuras/E5.pdf}
+%\label{E5}
+%}
+%\subfigure{f)
+%\includegraphics[width=1.4 in]{figuras/E6.pdf}
+%\label{E6}
+%}
+%\caption{Gráfico de $E_i(x,y)$. \subref{E1} LP01 modo $E_1$ com $\Delta x=$ 15 $\mu$m e $\Delta y=$ 10 $\mu$m . \subref{E2} LP01 modo $E_2$. \subref{E3} LP11 modo $E_3$. \subref{E4} LP21 modo $E_4$. \subref{E5} LP02 modo $E_5$. \subref{E6} LP31 modo $E_6$.}
+%\label{ModosE}
+%\end{figure}
+
+
+
+
+\section{Conclusões}
+
+bla bla
+
+
+\begin{appendices}
+
+
+\section{aaa de aa} \label{eqsmaxwell}
+
+asdasdasd
+
+
+
+
+
+
+
+
+
+\subsection{bla bla} \label{codigo_inte}
+%Este código é usado para calcular o método de integração de Simpson em 2D. Ele usa o pacote Bolstad2.
+%\lstinputlisting{simp2D.R}
+\end{appendices}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{tripathi} S. M. Grisotto, A. Grisotto, and J.-P. Grisotto,  \textit{Artigo sobre a familia grisotto, haha}. Jornal da familia, \href{10.1109/JLT.2008.200883123}{\textbf{27} (2015) 31348-2356}.
+
+
+
+
+
+\end{thebibliography}
+
+\end{document}
