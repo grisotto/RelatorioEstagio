@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.11.18)  19 JAN 2016 00:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.11.18)  19 JAN 2016 00:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1617,7 +1617,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 315.
 Here is how much of TeX's memory you used:
  34604 strings out of 494900
  673704 string characters out of 6179226
- 762772 words of memory out of 5000000
+ 762773 words of memory out of 5000000
  37220 multiletter control sequences out of 15000+600000
  84588 words of font info for 113 fonts, out of 8000000 for 9000
  38 hyphenation exceptions out of 8191
@@ -1626,7 +1626,7 @@ Here is how much of TeX's memory you used:
 public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmri12.pfb>
-Output written on relatorioEstagio.pdf (2 pages, 94477 bytes).
+Output written on relatorioEstagio.pdf (2 pages, 94476 bytes).
 PDF statistics:
  48 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
