@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.11.18)  31 JAN 2016 00:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.11.18)  1 FEB 2016 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1596,55 +1596,58 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 216.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 218.
+(babel)             in language  on input line 227.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 220.
+(babel)             in language  on input line 229.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 222.
+(babel)             in language  on input line 231.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 313.
+(babel)             in language  on input line 322.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 330.
+(babel)             in language  on input line 337.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 330.
+(babel)             in language  on input line 337.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.330 \end{document}
-                     [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
+l.337 \end{thebibliography}
+                            [2]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 339.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 339.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.339 \end{document}
+                     [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 339.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 339.
  (./relatorioEstagio.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
-
-
-Package rerunfilecheck Warning: File `relatorioEstagio.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `relatorioEstagio.out':
-(rerunfilecheck)             Before: 75D8D87FD7D0E2B294FBA5F6015AEEC1;100
-(rerunfilecheck)             After:  471F8EF105CA2E0A51AB52B7066D2020;418.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 339.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 339.
+Package rerunfilecheck Info: File `relatorioEstagio.out' has not changed.
+(rerunfilecheck)             Checksum: 471F8EF105CA2E0A51AB52B7066D2020;418.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 339.
  ) 
 Here is how much of TeX's memory you used:
- 34607 strings out of 494900
- 673726 string characters out of 6179226
- 762836 words of memory out of 5000000
- 37215 multiletter control sequences out of 15000+600000
- 84755 words of font info for 114 fonts, out of 8000000 for 9000
+ 34621 strings out of 494900
+ 673874 string characters out of 6179226
+ 762837 words of memory out of 5000000
+ 37219 multiletter control sequences out of 15000+600000
+ 85248 words of font info for 119 fonts, out of 8000000 for 9000
  38 hyphenation exceptions out of 8191
- 62i,6n,56p,10367b,753s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,6n,56p,10367b,893s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
 public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmri12.pfb>
-Output written on relatorioEstagio.pdf (2 pages, 99246 bytes).
+Output written on relatorioEstagio.pdf (3 pages, 101284 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  10 named destinations out of 1000 (max. 500000)
- 31261 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 31293 words of extra memory for PDF output out of 35830 (max. 10000000)
 
