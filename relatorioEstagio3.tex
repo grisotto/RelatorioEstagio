@@ -1,0 +1,382 @@
+\documentclass[12pt,a4paper]{article}
+
+% estes dois inputenc são para o mac conseguir ler os acentos gráficos em portugues
+% mas apenas o utf8 funciona no meu computador
+%\usepackage[applemac]{inputenc}
+%\usepackage[utf8]{inputenc}
+% \usepackage[portuges,brazilian]{babel}
+
+% esse inputenc é para o windows ler os acentos gráficos, e não funciona no mac
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{lmodern}
+
+%package para fazer figuras a e b automaticamente
+\usepackage{subfigure}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+%appendix
+\usepackage[title,titletoc,toc]{appendix}
+
+\usepackage{titlesec}
+\titleformat{\paragraph}[runin]{\normalfont\normalsize\itshape}{\theparagraph}{}{}[.] %format paragraph italic and ser a period after it
+\titlespacing{\paragraph}{0pt}{0pt}{*1} %remove spacing and add one characterspace after paragraph
+
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%esse package é para fazer multirow nas tabelas
+\usepackage{multirow}
+
+\usepackage{sidecap}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=2.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+%\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{calc}
+\usepackage{titletoc}
+\usepackage{indentfirst}
+\usepackage{pifont}
+\usepackage{hyperref}
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=blue,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+%para colocar superscript na esquerda
+\usepackage{leftidx}% http://ctan.org/pkg/leftidx
+
+\usepackage{listings} % package para escrever codigo no texto
+
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+%\lstset{frame=tb,
+%  language=Matlab,
+%  aboveskip=3mm,
+%  belowskip=3mm,
+%  showstringspaces=false,
+%  columns=flexible,
+%  basicstyle={\small\ttfamily},
+%  numbers=none,
+%  numberstyle=\tiny\color{gray},
+%  keywordstyle=\color{blue},
+%  commentstyle=\color{dkgreen},
+%  stringstyle=\color{mauve},
+%  breaklines=true,
+%  breakatwhitespace=true
+%  tabsize=3
+%}
+
+\lstset{ %
+  language=R,                     % the language of the code
+  basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{blue},      % keyword style
+  commentstyle=\color{dkgreen},   % comment style
+  stringstyle=\color{mauve},      % string literal style
+  escapeinside={\%*}{*)},         % if you want to add a comment within your code
+  morekeywords={*,...}            % if you want to add more keywords to the set
+} 
+
+% para incluir arquivos pdf, usando o comando \includepdf
+\usepackage{pdfpages}
+\usepackage{authblk}
+\usepackage{siunitx}
+
+\usepackage{mhchem} %used to write chemical formulas
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha tese de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+\baselineskip 0.75cm
+\parindent = 0.7cm
+\parskip = 0.0cm
+\addtolength{\skip\footins}{1cm}
+
+\usepackage{graphicx}
+
+%macros para gerar o r cursivo do griffiths
+\def\rcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=25mm,
+ right=25mm,
+ top=25mm,
+ bottom=25mm,
+ }
+ 
+ %package para escrever comentarios
+%\usepackage[portuguese,textwidth=3.5cm,textsize=small]{todonotes}%antes de publicar colocar como opçao [disable] para apagar todos os comentarios
+%\usepackage[utf8]{inputenc} 
+%\usepackage[textwidth=1.5cm,textsize=small]{todonotes}%antes de publicar colocar como opçao [disable] para apagar todos os comentarios
+
+\usepackage{xargs}                      % Use more than one optional parameter in a new commands
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=footnotesize]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+ 
+ 
+%don't want date printed
+\date{}
+\title{\Large \bf Elaboração de arquitetura de aplicação com soluções moveis e máquinas POS}
+\author[1]{\bf Grisotto, R. S}
+\author[1]{\bf Oliveira, T. B. de}
+\affil[1]{Instituto de Ciências Exatas e Tecnológicas (ICET),  Universidade Federal de Goiás
+  (UFG)\\
+  Jataí -- GO, Brazil}
+\affil[ ]{\textit {e-mail: rafaelgrisotto@gmail.com}}
+
+
+\renewcommand\Authands{ e }
+
+
+
+
+\begin{document} 
+ \maketitle
+
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+%\vspace*{1cm}
+
+
+
+
+
+     
+
+
+
+\section{Introdução}
+%
+%Problema: Empresa quer entrar no ramo de venda de ingressos
+%	Qual o faturamento anual
+%	Tem soluções existentes na região
+%	Falta demanda na regiao
+%	Experiência já existente da empresa
+%	é uma startup
+%	
+%
+%
+%Como: Descrever o problema de como ela vai entrar no ramo
+%		vendendo ingressos pelas maquininhas pos
+%		solução pronta ou comprar a maquinha e desenvolver o software
+%		
+%
+%Proposta: 
+%	 
+
+O ramo de tecnologia da informação(TI) está crescendo, integrando muitas áreas e fazendo antigos paradigmas de negócios serem transformados\cite{tapscott}. Com isso, novas empresas de TI estão prosperando, na chamada era digital\cite{walton}. Umas das formas que as empresas de TI utilizam para prosperarem é integrarem em incubadoras\cite{xavier}, que são um local onde ideias se tornam produtos ou serviços, garantindo à empresas incubadas suporte administrativo e jurídico.  \par 
+%Nesse sentindo, uma peça chave na era digital é o software, pois ele processa dados e entrega soluções, assim as empresas precisam pensar em vários fatores, como na arquitetura de hardware, arquitetura de comunicação entre as camadas e estas preocupações tentam garantir uma maior segurança, disponibilidade, agilidade e facilidade no uso da solução em software, além de tentar garantir uma escalabilidade da aplicação.[preciso citar fonte]
+
+Com isso, a empresa Telvo sistemas Computacionais que está incubada na Beecth, incubadora tecnológica da Universidade Federal de Goiás da Regional Jataí, e desenvolve várias soluções em uma ampla área de TI, tais como websites, soluções com biometria, aplicações web e \textit{desktop}, e também aplicações moveis e soluções em maquinas POS (\textit{Point of sale}), que são ponto de venda ou ponto de serviço com mobilidade até o cliente.
+
+\indent Estas maquinas POS (mais conhecidas como maquinas de cartão de crédito e débito) proporcionam ao comerciante de produtos ou serviços, mobilidade e agilidade no momento do cliente efetuar o pagamento. Esta tecnologia conta com a confiabilidade no processo de cobrança, pois garante transmissão dos dados apenas entre a máquina POS e a operadora do cartão. 
+
+\indent Na proposta de estágio do curso Ciências da Computação da UFG na Regional Jataí, propõe ao aluno encontrar um problema da área da atuação do curso e partir deste levantamento, o aluno deve propor uma solução por meio da elaboração de um relatório técnico. 
+
+\indent Conforme entrevistas com o CEO da empresa Telvo e também o supervisor deste estágio a empresa está com plano de entrar no ramo de venda de ingressos para eventos e shows e integrar a ideia das maquinas POS com aplicações moveis, entretanto existe algumas soluções prontas, porém de custo elevado e a empresa quer avaliar a melhor opção entre adquirir as soluções prontas ou desenvolver a sua própria.
+ integrar a ideia das maquinas POS em aplicações moveis, entretanto existe um problema em elaborar uma arquitetura relativamente complexa, garantindo segurança, confiabilidade e privacidade com as transações de informações entre as camadas.
+
+\indent Sendo assim, o objetivo principal deste trabalho é avaliar uma solução pronta, a partir do seu investimento inicial e quando a empresa terá algum retorno ou ela mesmo desenvolver o seu software a partir da sua atual realidade como startup.
+
+
+
+
+
+\section{Diagnóstico da Situação Problema}
+
+Conforme as discussões com os funcionários da Telvo, o problema foi evidenciado a partir de debates sem nenhuma pergunta especifica, apenas uma conversa informal onde foi relatado o seus requisitos funcionais e não funcionais. Durante a discussão foi mostrado que a empresa sendo uma startup, onde a falta de recursos aliada a insegurança de viabilizar o projeto fazem delas irem e virem, sendo possível ficarem milionárias  ou fecharem num período curto de tempo \cite{perin}, sendo assim não tendo recursos para contratar pessoal, deve se preocupar em selecionar a melhor solução para poder conseguir entrar neste mercado.
+
+
+O novo ramo que a empresa quer entrar é definido da seguinte forma, ela aluga estas máquinas POS onde são vendidos os ingressos para eventos ou shows e na hora da validação deste usa-se um smartphone para validar o código de barras impresso, O mercado de eventos está em fase de crescimento, onde movimentou R\$ 59 bilhões no ano de 2014 \cite{eventos} e a região de Jataí e entorno está carente deste tipo de solução.
+Após este levantamento, vimos a necessidade de alguns pontos:
+	* \textbf{Aquisição de máquinas POS}: Existe soluções pagas que entregam este ponto e o software pronto para estas máquinas POS ou podemos adquirir máquinas separadamente. 
+	
+	* \textbf{Software para funcionar nas máquinas POS}: As soluções pagam na entregam isto junto, mas podemos desenvolver as solução para estas máquinas POS.
+	
+	* \textbf{Necessidade de webservice}: Este webservice seria a forma de conexão entre as máquinas POS e os outros dispositivos para validação dos ingressos.
+
+
+
+
+
+
+
+
+\section{Proposta de Intervenção}
+
+Sobre os problemas expostos, precisamos mostrar se será melhor adquirir uma solução pronta ou a empresa desenvolver o próprio software, iremos avaliar o desenvolvimento do software a partir de métricas de ponto por fusão. Primeiramente iremos trabalhar com prototipação para gerar as telas deste sistema para conseguir calcular o esforço para desenvolver este sistema.
+
+
+
+
+
+\section{Planejamento da Avaliação da Proposta}
+
+\section{Relato das Atividades Desenvolvidas e Experiências Vivenciadas}
+
+
+
+%\begin{figure}
+%\centering
+%\subfigure{a)
+%\includegraphics[width=1.9 in]{figuras/SMScopy.pdf}
+%\label{SMScopy}
+%}
+%\subfigure{b)
+%
+%\includegraphics[width=1.6 in]{figuras/deltaxy.pdf}
+%\label{deltax}
+%}
+%\caption{\subref{SMScopy} Diagrama esquemático para a estrutura do sensor SMS. A fibra SMF são as extremidades verdes, a fibra MMF é o retângulo azul / vermelho de comprimento $L$, onde a parte vermelha é o comprimento aquecido $r$.\subref{deltax} Ilustração do desalinhamento transversal entre as duas fibras no plano $xy$. O pequeno circulo vermelho (raio $a$) é o núcleo da fibra SMF e o grande circulo azul (raio $b$)  é o núcleo da fibra MMF. O deslocamento entre as duas fibras é $\vec{d} = \hat{i}\Delta x + \hat{j}\Delta y $.}
+%\label{modelo}
+%\end{figure}
+
+
+
+
+%\subsection{aa aa}
+
+
+
+
+
+
+
+
+%
+%\begin{figure}[h!]
+%\centering
+%\subfigure{a)
+%\includegraphics[width=1.4 in]{figuras/E1.pdf}
+%\label{E1}
+%}
+%\subfigure{b)
+%\includegraphics[width=1.4 in]{figuras/E2.pdf}
+%\label{E2}
+%}
+%\subfigure{c)
+%\includegraphics[width=1.4 in]{figuras/E3.pdf}
+%\label{E3}
+%} \\
+%\subfigure{d)
+%\includegraphics[width=1.4 in]{figuras/E4.pdf}
+%\label{E4}
+%} 
+%\subfigure{e)
+%\includegraphics[width=1.4 in]{figuras/E5.pdf}
+%\label{E5}
+%}
+%\subfigure{f)
+%\includegraphics[width=1.4 in]{figuras/E6.pdf}
+%\label{E6}
+%}
+%\caption{Gráfico de $E_i(x,y)$. \subref{E1} LP01 modo $E_1$ com $\Delta x=$ 15 $\mu$m e $\Delta y=$ 10 $\mu$m . \subref{E2} LP01 modo $E_2$. \subref{E3} LP11 modo $E_3$. \subref{E4} LP21 modo $E_4$. \subref{E5} LP02 modo $E_5$. \subref{E6} LP31 modo $E_6$.}
+%\label{ModosE}
+%\end{figure}
+
+
+
+%
+%\section{Conclusões}
+%
+%bla bla
+%
+%
+%\begin{appendices}
+%
+%
+%\section{aaa de aa} \label{eqsmaxwell}
+%
+%asdasdasd
+%
+%
+%
+
+
+
+
+
+%
+%\subsection{bla bla} \label{codigo_inte}
+%%Este código é usado para calcular o método de integração de Simpson em 2D. Ele usa o pacote Bolstad2.
+%%\lstinputlisting{simp2D.R}
+%\end{appendices}
+%
+%
+\begin{thebibliography}{9}
+
+
+
+\bibitem{tapscott} Tapscott, D, and Caston, Art. \textit{Mudança de paradigma: a nova promessa da tecnologia da informação}. São Paulo: Makron-McGraw-Hill (1995).
+
+\bibitem{walton} Walton, Richard E. \textit{Tecnologia de informação: o uso de TI pelas empresas que obtêm vantagem competitiva}. Atlas, 1994.
+
+\bibitem{xavier}Xavier, W. S., and Martins, G. S.. \textit{FORTALECENDO EMPREENDIMENTOS EM TI: QUAL A CONTRIBUIÇÃO DAS INCUBADORAS?}. Journal of Information Systems and Technology Management: JISTEM, 5(3), 433 (2008).
+
+\bibitem{tanebaum} Steen, M. van, Tanenbaum, A. S,  \textit{Distributed systems: principles and paradigms}. Pearson Prentice Hall, (2007).
+
+\bibitem{perin} Perin, B. \textit{A Revolução das Startups-O Novo Mundo do Empreendedorismo de Alto Impacto}. Alta Books Editora.
+
+\bibitem{eventos} Como crescer no mercado de eventos em época de crise http://www.abeoc.org.br/2015/04/como-crescer-no-mercado-de-eventos-em-epoca-de-crise/
+
+
+%\bibitem{API2} S. M. Grisotto, A. Grisotto, and J.-P. Grisotto,  \textit{Artigo sobre a familia grisotto, haha}. Jornal da familia, \href{10.1109/JLT.2008.200883123}{\textbf{27} (2015) 31348-2356}.
+
+
+
+
+
+\end{thebibliography}
+
+\end{document}
