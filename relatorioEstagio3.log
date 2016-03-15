@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.2.4)  14 MAR 2016 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.2.4)  15 MAR 2016 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1359,6 +1359,12 @@ LaTeX Warning: Label `POS_inicial' multiply defined.
 
 LaTeX Warning: Label `sub@POS_inicial' multiply defined.
 
+
+LaTeX Warning: Label `POS_alis' multiply defined.
+
+
+LaTeX Warning: Label `pontos_fun_final_2' multiply defined.
+
 )
 \openout1 = `relatorioEstagio3.aux'.
 
@@ -1628,163 +1634,210 @@ l.264
 File: POS/pontos_fun_ali_aie.png Graphic file (type png)
 
 <use POS/pontos_fun_ali_aie.png>
-Package pdftex.def Info: POS/pontos_fun_ali_aie.png used on input line 293.
+Package pdftex.def Info: POS/pontos_fun_ali_aie.png used on input line 292.
 (pdftex.def)             Requested size: 281.85255pt x 94.16797pt.
 
 <POS/pontos_fun_ce.png, id=54, 880.28876pt x 298.11375pt>
 File: POS/pontos_fun_ce.png Graphic file (type png)
 
 <use POS/pontos_fun_ce.png>
-Package pdftex.def Info: POS/pontos_fun_ce.png used on input line 298.
+Package pdftex.def Info: POS/pontos_fun_ce.png used on input line 297.
 (pdftex.def)             Requested size: 281.85255pt x 95.44838pt.
 
 <POS/1-Tela_pos_1.png, id=60, 302.12875pt x 598.235pt>
 File: POS/1-Tela_pos_1.png Graphic file (type png)
 
 <use POS/1-Tela_pos_1.png>
-Package pdftex.def Info: POS/1-Tela_pos_1.png used on input line 318.
+Package pdftex.def Info: POS/1-Tela_pos_1.png used on input line 320.
 (pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
 
 <POS/2-pos_ingre_1_B.png, id=61, 302.12875pt x 598.235pt>
 File: POS/2-pos_ingre_1_B.png Graphic file (type png)
 
 <use POS/2-pos_ingre_1_B.png>
-Package pdftex.def Info: POS/2-pos_ingre_1_B.png used on input line 323.
+Package pdftex.def Info: POS/2-pos_ingre_1_B.png used on input line 325.
 (pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
 
 <POS/3-pos_ingr_2_B.png, id=62, 302.12875pt x 598.235pt>
 File: POS/3-pos_ingr_2_B.png Graphic file (type png)
 
 <use POS/3-pos_ingr_2_B.png>
-Package pdftex.def Info: POS/3-pos_ingr_2_B.png used on input line 328.
+Package pdftex.def Info: POS/3-pos_ingr_2_B.png used on input line 330.
 (pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
 
 <POS/4-pos_ingr_3_B.png, id=63, 302.12875pt x 598.235pt>
 File: POS/4-pos_ingr_3_B.png Graphic file (type png)
 
 <use POS/4-pos_ingr_3_B.png>
-Package pdftex.def Info: POS/4-pos_ingr_3_B.png used on input line 334.
+Package pdftex.def Info: POS/4-pos_ingr_3_B.png used on input line 336.
 (pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
 
 <POS/5-pos_ingr_4_B.png, id=64, 302.12875pt x 598.235pt>
 File: POS/5-pos_ingr_4_B.png Graphic file (type png)
 
 <use POS/5-pos_ingr_4_B.png>
-Package pdftex.def Info: POS/5-pos_ingr_4_B.png used on input line 339.
+Package pdftex.def Info: POS/5-pos_ingr_4_B.png used on input line 341.
 (pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+File: POS/1-Tela_pos_1.png Graphic file (type png)
+<use POS/1-Tela_pos_1.png>
+Package pdftex.def Info: POS/1-Tela_pos_1.png used on input line 355.
+(pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
+
+<POS/7-pos_rela_1_B.png, id=76, 302.12875pt x 598.235pt>
+File: POS/7-pos_rela_1_B.png Graphic file (type png)
+
+<use POS/7-pos_rela_1_B.png>
+Package pdftex.def Info: POS/7-pos_rela_1_B.png used on input line 360.
+(pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
+
+<POS/8-pos_rela_2_B.png, id=77, 302.12875pt x 598.235pt>
+File: POS/8-pos_rela_2_B.png Graphic file (type png)
+
+<use POS/8-pos_rela_2_B.png>
+Package pdftex.def Info: POS/8-pos_rela_2_B.png used on input line 365.
+(pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 347.
+(babel)             in language  on input line 369.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 347.
+(babel)             in language  on input line 369.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.347 
-       [3 <./POS/pontos_fun_ali_aie.png> <./POS/pontos_fun_ce.png>]
+l.369 \end{figure}
+                   [3 <./POS/pontos_fun_ali_aie.png> <./POS/pontos_fun_ce.png>]
 File: POS/1-Tela_pos_1.png Graphic file (type png)
-
 <use POS/1-Tela_pos_1.png>
-Package pdftex.def Info: POS/1-Tela_pos_1.png used on input line 353.
-(pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
-
-<POS/7-pos_rela_1_B.png, id=87, 302.12875pt x 598.235pt>
-File: POS/7-pos_rela_1_B.png Graphic file (type png)
-
-<use POS/7-pos_rela_1_B.png>
-Package pdftex.def Info: POS/7-pos_rela_1_B.png used on input line 358.
-(pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
-
-<POS/8-pos_rela_2_B.png, id=88, 302.12875pt x 598.235pt>
-File: POS/8-pos_rela_2_B.png Graphic file (type png)
-
-<use POS/8-pos_rela_2_B.png>
-Package pdftex.def Info: POS/8-pos_rela_2_B.png used on input line 363.
-(pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
-File: POS/1-Tela_pos_1.png Graphic file (type png)
- <use POS/1-Tela_pos_1.png>
-Package pdftex.def Info: POS/1-Tela_pos_1.png used on input line 376.
+Package pdftex.def Info: POS/1-Tela_pos_1.png used on input line 378.
 (pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
 
 <POS/6-pos_conf_B.png, id=96, 302.12875pt x 598.235pt>
 File: POS/6-pos_conf_B.png Graphic file (type png)
 
 <use POS/6-pos_conf_B.png>
-Package pdftex.def Info: POS/6-pos_conf_B.png used on input line 381.
+Package pdftex.def Info: POS/6-pos_conf_B.png used on input line 383.
 (pdftex.def)             Requested size: 115.63243pt x 228.9565pt.
+
+<POS/pontos_fun_ali.png, id=101, 991.705pt x 501.875pt>
+File: POS/pontos_fun_ali.png Graphic file (type png)
+
+<use POS/pontos_fun_ali.png>
+Package pdftex.def Info: POS/pontos_fun_ali.png used on input line 395.
+(pdftex.def)             Requested size: 476.98244pt x 241.38736pt.
+
+Overfull \hbox (21.73833pt too wide) in paragraph at lines 395--397
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `' on page  undefined on input line 405.
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 390.
+(babel)             in language  on input line 407.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 392.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 483.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 489.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 489.
+(babel)             in language  on input line 407.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.489 \bibitem{walton}
-                       Walton, Richard E. \textit{Tecnologia de informação: ...
-[4 <./POS/1-Tela_pos_1.png> <./POS/2-pos_ingre_1_B.png> <./POS/3-pos_ingr_2_B.p
-ng> <./POS/4-pos_ingr_3_B.png> <./POS/5-pos_ingr_4_B.png>]
+l.407 
+       [4 <./POS/1-Tela_pos_1.png> <./POS/2-pos_ingre_1_B.png> <./POS/3-pos_ing
+r_2_B.png> <./POS/4-pos_ingr_3_B.png> <./POS/5-pos_ingr_4_B.png>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 489.
+(babel)             in language  on input line 407.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 489.
+(babel)             in language  on input line 407.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.489 \bibitem{walton}
+l.407 
+       [5 <./POS/7-pos_rela_1_B.png> <./POS/8-pos_rela_2_B.png> <./POS/6-pos_co
+nf_B.png>] <POS/pontos_fun_final_2.png, id=130, 879.285pt x 780.9175pt>
+File: POS/pontos_fun_final_2.png Graphic file (type png)
+
+<use POS/pontos_fun_final_2.png>
+Package pdftex.def Info: POS/pontos_fun_final_2.png used on input line 412.
+(pdftex.def)             Requested size: 476.98244pt x 423.61954pt.
+
+Overfull \hbox (21.73833pt too wide) in paragraph at lines 412--414
+ [][] 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 435.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 437.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 528.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 534.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 534.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.534 \bibitem{walton}
                        Walton, Richard E. \textit{Tecnologia de informação: ...
-[5 <./POS/7-pos_rela_1_B.png> <./POS/8-pos_rela_2_B.png> <./POS/6-pos_conf_B.pn
-g>]
-Underfull \hbox (badness 10000) in paragraph at lines 497--498
+[6 <./POS/pontos_fun_ali.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 534.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 534.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.534 \bibitem{walton}
+                       Walton, Richard E. \textit{Tecnologia de informação: ...
+[7 <./POS/pontos_fun_final_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
 []\T1/lmr/m/n/12 (+20) Como crescer no mer-cado de even-tos em época de crise
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--498
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
 \T1/lmr/m/n/12 (+20) http://www.abeoc.org.br/2015/04/como-crescer-no-mercado-de
 -eventos-em-epoca-
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 508.
+(babel)             in language  on input line 553.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 508.
+(babel)             in language  on input line 553.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.508 \end{document}
-                     [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 508.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 508.
+l.553 \end{document}
+                     [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 553.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 553.
  (./relatorioEstagio3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 508.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 508.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 553.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 553.
 Package rerunfilecheck Info: File `relatorioEstagio3.out' has not changed.
 (rerunfilecheck)             Checksum: 471F8EF105CA2E0A51AB52B7066D2020;418.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 508.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 553.
  ) 
 Here is how much of TeX's memory you used:
- 34699 strings out of 494922
- 673709 string characters out of 6179937
- 778441 words of memory out of 5000000
- 37228 multiletter control sequences out of 15000+600000
- 99818 words of font info for 136 fonts, out of 8000000 for 9000
+ 34718 strings out of 494922
+ 674087 string characters out of 6179937
+ 779660 words of memory out of 5000000
+ 37239 multiletter control sequences out of 15000+600000
+ 100000 words of font info for 138 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  62i,7n,75p,10368b,901s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
@@ -1792,10 +1845,10 @@ public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmri12.pfb>
-Output written on relatorioEstagio3.pdf (6 pages, 2074798 bytes).
+Output written on relatorioEstagio3.pdf (8 pages, 2224873 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 36463 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 36473 words of extra memory for PDF output out of 42996 (max. 10000000)
 
