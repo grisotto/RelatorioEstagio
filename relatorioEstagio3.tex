@@ -257,6 +257,134 @@ Após este levantamento, vimos a necessidade de alguns pontos:
 
 Sobre os problemas expostos, precisamos mostrar se será melhor adquirir uma solução pronta ou a empresa desenvolver o próprio software, iremos avaliar o desenvolvimento do software a partir de métricas de ponto por fusão. Primeiramente iremos trabalhar com prototipação para gerar as telas deste sistema para conseguir calcular o esforço para desenvolver este sistema.
 
+Para estipular o preço do software que será usado na máquina POS, nós usaremos a metrica pontos por fusão e utilizaremos os padrões da literatura para valores padrões para está metrica, EXMPLICAR PONTOS POR FUÇÃO.
+
+
+Esta métrica separa o software em partes a partir do seus requisitos funcionais e dividi elas para facilitar a valoração:
+
+- Arquivos Lógicos Internos(ALI): armazenam dados mantidos pelo software
+	> Tabelas que armazenam dados mantidos pelo software;
+	> Arquivos de configuração;
+	> Arquivos de segurança de acesso ao software;
+	
+- Arquivos de Interface Externa(AIE): é um ALI de outro sistema com o qual o software deve comunicar.
+	> Arquivo de referência externa utilizado pelo software (uma tabela do banco de dados de outro sistema)
+
+- Entradas Externas (EE): Trata-se de um processo que trabalha com dados ou informações de controle que vêm do lado de fora da fronteira do software.
+	> Intenção de manter um ou mais ALIs.
+
+- Saídas Externas (SE): trata-se de um processo que envia dados ou informações de controle para fora da fronteira do software.
+	> Sua lógica de processamento deve conter ao menos uma fórmula matemática ou cálculo, ou criar dados derivados.
+
+- Consultas externas(CE): é um tipo de SE, porém seu processamento não deve conter fórmula matemática ou cálculo, nem gerar dados derivados.
+	> Recuperação de dados ou informações de controle.
+	
+	
+	Cada parte da métrica, tem uma escala conforme os ALIs e a quantidade de atributos referenciados, conforme as figuras abaixo:
+	
+	
+	
+	\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=3.9 in]{POS/pontos_fun_ali_aie.png}
+\label{pontos_fun_1}
+}
+\subfigure{b)
+
+\includegraphics[width=3.9 in]{POS/pontos_fun_ce.png}
+\label{pontos_fun_2}
+}
+
+
+\caption{Na figura \subref{pontos_fun_1} contém a tabela referente a contagem de atributos de ALI e AIE, já na tabela da figura \subref{pontos_fun_2} contém a referencias para a contagem de CE, EE, SE  }
+\label{pos_venda_ingresso}
+\end{figure}
+
+
+
+	
+	
+
+Vamos agora, analisar as telas do protótipo do software, para poder usar a métrica ponto por função:
+
+
+Neste caso vamos analisar a figura \ref{pos_venda_ingresso} o processo de venda de ingressos, que também é similar ao impressão de cortesias e reimpressão:
+
+	
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=1.6 in]{POS/1-Tela_pos_1.png}
+\label{POS_inicial}
+}
+\subfigure{b)
+
+\includegraphics[width=1.6 in]{POS/2-pos_ingre_1_B.png}
+\label{POS_ingresso_1}
+}
+\subfigure{c)
+
+\includegraphics[width=1.6 in]{POS/3-pos_ingr_2_B.png}
+\label{POS_ingresso_2}
+}
+\\
+\subfigure{d)
+
+\includegraphics[width=1.6 in]{POS/4-pos_ingr_3_B.png}
+\label{POS_ingresso_3}
+}
+\subfigure{e)
+
+\includegraphics[width=1.6 in]{POS/5-pos_ingr_4_B.png}
+\label{POS_ingresso_4}
+}
+\caption{Diagrama sequencial na máquina POS, demostrando o processo de venda de ingressos. \subref{POS_inicial} Tela inicial do software. \subref{POS_ingresso_1} Selecionada a opção Ingresso, mostra as opções disponíveis. \subref{POS_ingresso_2} Nesta tela, a partir de Venda, seleciona a opção ING. individual. \subref{POS_ingresso_3} Nesta parte coloca-se o código dos ingressos, um número apenas do contratante para ter controle sobre fraudes de ingressos. \subref{POS_ingresso_4} Digita-se a quantidade de ingressos e só aguardar a impressão. }
+\label{pos_venda_ingresso}
+\end{figure}
+
+
+
+Outro processo do software seria o de imprimir relatórios, e neste está descrito no processo da figura \ref{POS_rela}:
+
+\begin{figure}
+\centering
+\subfigure{a)
+\includegraphics[width=1.6 in]{POS/1-Tela_pos_1.png}
+\label{POS_inicial}
+}
+\subfigure{b)
+
+\includegraphics[width=1.6 in]{POS/7-pos_rela_1_B.png}
+\label{POS_rela_1}
+}
+\subfigure{c)
+
+\includegraphics[width=1.6 in]{POS/8-pos_rela_2_B.png}
+\label{POS_rela_2}
+}
+
+\caption{Diagrama sequencial na máquina POS, demostrando o processo de impressão de ingressos. \subref{POS_inicial} Tela inicial do software. \subref{POS_rela_1} Selecionada a opção Relatório, mostra as opções disponíveis. \subref{POS_rela_2} Nesta tela, você pode ver relatório do evento, que é descrição sobre informações do contratante e código secreto. Na opção Vendas, você tem um relatório completo das vendas dos ingressos e a receita. }
+\label{POS_rela}
+\end{figure}
+
+O outro processo, são as opções de configurações, que está sendo mostrado na figura \ref{pos_config}
+
+\begin{figure}
+\centering
+\subfigure{a)
+\includegraphics[width=1.6 in]{POS/1-Tela_pos_1.png}
+\label{POS_inicial}
+}
+\subfigure{b)
+
+\includegraphics[width=1.6 in]{POS/6-pos_conf_B.png}
+\label{POS_config_1}
+}
+
+\caption{Tela da máquina POS mostrando as opções de configurações \subref{POS_inicial} Tela inicial do software. \subref{POS_config_1} Selecionada a opção Configurações, mostra as opções disponíveis. }
+\label{pos_config}
+\end{figure}
 
 
 
