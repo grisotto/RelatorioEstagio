@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.2.4)  15 MAR 2016 10:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.2.4)  15 MAR 2016 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1733,9 +1733,6 @@ Overfull \hbox (21.73833pt too wide) in paragraph at lines 395--397
  [][] 
  []
 
-
-LaTeX Warning: Reference `' on page  undefined on input line 405.
-
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 407.
 Package babel Info: Redefining portuges shorthand "|
@@ -1757,7 +1754,7 @@ een already used, duplicate ignored
                    \relax 
 l.407 
        [5 <./POS/7-pos_rela_1_B.png> <./POS/8-pos_rela_2_B.png> <./POS/6-pos_co
-nf_B.png>] <POS/pontos_fun_final_2.png, id=130, 879.285pt x 780.9175pt>
+nf_B.png>] <POS/pontos_fun_final_2.png, id=134, 879.285pt x 780.9175pt>
 File: POS/pontos_fun_final_2.png Graphic file (type png)
 
 <use POS/pontos_fun_final_2.png>
@@ -1807,37 +1804,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 542--543
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 553.
+(babel)             in language  on input line 555.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 553.
+(babel)             in language  on input line 555.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.553 \end{document}
+l.555 \end{document}
                      [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 553.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 553.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 555.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 555.
  (./relatorioEstagio3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 553.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 553.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 555.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 555.
 Package rerunfilecheck Info: File `relatorioEstagio3.out' has not changed.
 (rerunfilecheck)             Checksum: 471F8EF105CA2E0A51AB52B7066D2020;418.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 553.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 555.
  ) 
 Here is how much of TeX's memory you used:
- 34718 strings out of 494922
- 674087 string characters out of 6179937
- 779660 words of memory out of 5000000
+ 34721 strings out of 494922
+ 674156 string characters out of 6179937
+ 779704 words of memory out of 5000000
  37239 multiletter control sequences out of 15000+600000
- 100000 words of font info for 138 fonts, out of 8000000 for 9000
+ 100091 words of font info for 139 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  62i,7n,75p,10368b,901s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
@@ -1845,10 +1839,10 @@ public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmri12.pfb>
-Output written on relatorioEstagio3.pdf (8 pages, 2224873 bytes).
+Output written on relatorioEstagio3.pdf (8 pages, 2225337 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
  36473 words of extra memory for PDF output out of 42996 (max. 10000000)
 
