@@ -197,23 +197,6 @@ citecolor=blue }
 
 
 \section{Introdução}
-%
-%Problema: Empresa quer entrar no ramo de venda de ingressos
-%	Qual o faturamento anual
-%	Tem soluções existentes na região
-%	Falta demanda na regiao
-%	Experiência já existente da empresa
-%	é uma startup
-%	
-%
-%
-%Como: Descrever o problema de como ela vai entrar no ramo
-%		vendendo ingressos pelas maquininhas pos
-%		solução pronta ou comprar a maquinha e desenvolver o software
-%		
-%
-%Proposta: 
-%	 
 
 O ramo de tecnologia da informação(TI) está crescendo, integrando muitas áreas e fazendo antigos paradigmas de negócios serem transformados\cite{tapscott}. Com isso, novas empresas de TI estão prosperando, na chamada era digital\cite{walton}. Umas das formas que as empresas de TI utilizam para prosperarem é integrarem em incubadoras\cite{xavier}, que são um local onde ideias se tornam produtos ou serviços, garantindo à empresas incubadas suporte administrativo e jurídico.  \par 
 %Nesse sentindo, uma peça chave na era digital é o software, pois ele processa dados e entrega soluções, assim as empresas precisam pensar em vários fatores, como na arquitetura de hardware, arquitetura de comunicação entre as camadas e estas preocupações tentam garantir uma maior segurança, disponibilidade, agilidade e facilidade no uso da solução em software, além de tentar garantir uma escalabilidade da aplicação.[preciso citar fonte]
@@ -240,11 +223,11 @@ Conforme as discussões com os funcionários da Telvo, o problema foi evidenciado 
 
 O novo ramo que a empresa quer entrar é definido da seguinte forma, ela aluga estas máquinas POS onde são vendidos os ingressos para eventos ou shows e na hora da validação deste usa-se um smartphone para validar o código de barras impresso, O mercado de eventos está em fase de crescimento, onde movimentou R\$ 59 bilhões no ano de 2014 \cite{eventos} e a região de Jataí e entorno está carente deste tipo de solução.
 Após este levantamento, vimos a necessidade de alguns pontos:
-	* \textbf{Aquisição de máquinas POS}: Existe soluções pagas que entregam este ponto e o software pronto para estas máquinas POS ou podemos adquirir máquinas separadamente. 
+	- \textbf{Aquisição de máquinas POS}: Existe soluções pagas que entregam este ponto e o software pronto para estas máquinas POS ou podemos adquirir máquinas separadamente. 
 	
-	* \textbf{Software para funcionar nas máquinas POS}: As soluções pagam na entregam isto junto, mas podemos desenvolver as solução para estas máquinas POS.
+	- \textbf{Software para funcionar nas máquinas POS}: As soluções pagam na entregam isto junto, mas podemos desenvolver as solução para estas máquinas POS.
 	
-	* \textbf{Necessidade de webservice}: Este webservice seria a forma de conexão entre as máquinas POS e os outros dispositivos para validação dos ingressos.
+	- \textbf{Necessidade de webservice}: Este webservice seria a forma de conexão entre as máquinas POS e os outros dispositivos para validação dos ingressos.
 
 
 
@@ -257,30 +240,35 @@ Após este levantamento, vimos a necessidade de alguns pontos:
 
 Sobre os problemas expostos, precisamos mostrar se será melhor adquirir uma solução pronta ou a empresa desenvolver o próprio software, iremos avaliar o desenvolvimento do software a partir de métricas de ponto por fusão. Primeiramente iremos trabalhar com prototipação para gerar as telas deste sistema para conseguir calcular o esforço para desenvolver este sistema.
 
-Para estipular o preço do software que será usado na máquina POS, nós usaremos a metrica pontos por fusão e utilizaremos os padrões da literatura para valores padrões para está metrica, EXMPLICAR PONTOS POR FUÇÃO.
+Para estipular o preço do software que será usado na máquina POS, nós usaremos a metrica pontos por fusão e utilizaremos os padrões da literatura para valores padrões para está metrica, Segunda Pressman \cite{pressman2009engenharia}, "A métrica ponto de função pode ser usada efetivamente como um meio para medir a funcilidade fornecidade por um sistema... ela pode ser empreada para estimar o custo ou trabalho necessário para projetar, codificar e testar o software".
 
 
 Esta métrica separa o software em partes a partir do seus requisitos funcionais e dividi elas para facilitar a valoração:
 
-- Arquivos Lógicos Internos(ALI): armazenam dados mantidos pelo software
+- \textbf{Arquivos Lógicos Internos(ALI)}: armazenam dados mantidos pelo software
+
 	> Tabelas que armazenam dados mantidos pelo software;
 	> Arquivos de configuração;
 	> Arquivos de segurança de acesso ao software;
 	
-- Arquivos de Interface Externa(AIE): é um ALI de outro sistema com o qual o software deve comunicar.
+- \textbf{Arquivos de Interface Externa(AIE)}: é um ALI de outro sistema com o qual o software deve comunicar.
+
 	> Arquivo de referência externa utilizado pelo software (uma tabela do banco de dados de outro sistema)
 
-- Entradas Externas (EE): Trata-se de um processo que trabalha com dados ou informações de controle que vêm do lado de fora da fronteira do software.
+- \textbf{Entradas Externas (EE)}: Trata-se de um processo que trabalha com dados ou informações de controle que vêm do lado de fora da fronteira do software.
+
 	> Intenção de manter um ou mais ALIs.
 
-- Saídas Externas (SE): trata-se de um processo que envia dados ou informações de controle para fora da fronteira do software.
+- \textbf{Saídas Externas (SE)}: trata-se de um processo que envia dados ou informações de controle para fora da fronteira do software.
+
 	> Sua lógica de processamento deve conter ao menos uma fórmula matemática ou cálculo, ou criar dados derivados.
 
-- Consultas externas(CE): é um tipo de SE, porém seu processamento não deve conter fórmula matemática ou cálculo, nem gerar dados derivados.
+- \textbf{Consultas externas(CE)}: é um tipo de SE, porém seu processamento não deve conter fórmula matemática ou cálculo, nem gerar dados derivados.
+
 	> Recuperação de dados ou informações de controle.
 	
 	
-	Cada parte da métrica, tem uma escala conforme os ALIs e a quantidade de atributos referenciados, conforme as figuras abaixo:
+	Cada parte da métrica, tem uma escala conforme os ALIs e a quantidade de atributos referenciados, conforme as figuras abaixo. Na figura \subref{pontos_fun_1} contém a tabela referente a contagem de atributos de ALI e AIE, já na tabela da figura \subref{pontos_fun_2} contém a referencias para a contagem de CE, EE, SE. 
 	
 	
 	
@@ -311,7 +299,7 @@ Vamos agora, analisar as telas do protótipo do software, para poder usar a métri
 
 Neste caso vamos analisar a figura \ref{pos_venda_ingresso} o processo de venda de ingressos, que também é similar ao impressão de cortesias e reimpressão:
 
-EXPLICAR QUE O GENERO COLOCA 1 PARA FEMINITO E 2 PARA MASCULINO
+Diagrama sequencial na máquina POS, demostrando o processo de venda de ingressos. \subref{POS_inicial} Tela inicial do software. \subref{POS_ingresso_1} Selecionada a opção Ingresso, mostra as opções disponíveis. \subref{POS_ingresso_2} Nesta tela, a partir de Venda, digite 1 para feminino e 2 para masculino \subref{POS_ingresso_3} Nesta parte coloca-se o código dos ingressos, um número apenas do contratante para ter controle sobre fraudes de ingressos. \subref{POS_ingresso_4} Digita-se a quantidade de ingressos e só aguardar a impressão.
 
 	
 \begin{figure}[h!]
@@ -341,7 +329,7 @@ EXPLICAR QUE O GENERO COLOCA 1 PARA FEMINITO E 2 PARA MASCULINO
 \includegraphics[width=1.6 in]{POS/5-pos_ingr_4_B.png}
 \label{POS_ingresso_4}
 }
-\caption{Diagrama sequencial na máquina POS, demostrando o processo de venda de ingressos. \subref{POS_inicial} Tela inicial do software. \subref{POS_ingresso_1} Selecionada a opção Ingresso, mostra as opções disponíveis. \subref{POS_ingresso_2} Nesta tela, a partir de Venda, seleciona a opção ING. individual. \subref{POS_ingresso_3} Nesta parte coloca-se o código dos ingressos, um número apenas do contratante para ter controle sobre fraudes de ingressos. \subref{POS_ingresso_4} Digita-se a quantidade de ingressos e só aguardar a impressão. }
+\caption{Figura do processo de venda de um ingresso. }
 \label{pos_venda_ingresso}
 \end{figure}
 
@@ -349,7 +337,9 @@ EXPLICAR QUE O GENERO COLOCA 1 PARA FEMINITO E 2 PARA MASCULINO
 
 Outro processo do software seria o de imprimir relatórios, e neste está descrito no processo da figura \ref{POS_rela}:
 
-\begin{figure}
+Diagrama sequencial na máquina POS, demostrando o processo de impressão de ingressos. \subref{POS_inicial} Tela inicial do software. \subref{POS_rela_1} Selecionada a opção Relatório, mostra as opções disponíveis. \subref{POS_rela_2} Nesta tela, você pode ver relatório do evento, que é descrição sobre informações do contratante e código secreto. Na opção Vendas, você tem um relatório completo das vendas dos ingressos e a receita. 
+
+\begin{figure}[h!]
 \centering
 \subfigure{a)
 \includegraphics[width=1.6 in]{POS/1-Tela_pos_1.png}
@@ -366,13 +356,15 @@ Outro processo do software seria o de imprimir relatórios, e neste está descrito
 \label{POS_rela_2}
 }
 
-\caption{Diagrama sequencial na máquina POS, demostrando o processo de impressão de ingressos. \subref{POS_inicial} Tela inicial do software. \subref{POS_rela_1} Selecionada a opção Relatório, mostra as opções disponíveis. \subref{POS_rela_2} Nesta tela, você pode ver relatório do evento, que é descrição sobre informações do contratante e código secreto. Na opção Vendas, você tem um relatório completo das vendas dos ingressos e a receita. }
+\caption{Figura do processo de impressão de relatórios}
 \label{POS_rela}
 \end{figure}
 
-O outro processo, são as opções de configurações, que está sendo mostrado na figura \ref{pos_config}
+O outro processo, são as opções de configurações, que está sendo mostrado na figura \ref{pos_config}:
 
-\begin{figure}
+Tela da máquina POS mostrando as opções de configurações \subref{POS_inicial} Tela inicial do software. \subref{POS_config_1} Selecionada a opção Configurações, mostra as opções disponíveis.
+
+\begin{figure}[h!]
 \centering
 \subfigure{a)
 \includegraphics[width=1.6 in]{POS/1-Tela_pos_1.png}
@@ -384,14 +376,16 @@ O outro processo, são as opções de configurações, que está sendo mostrado na fig
 \label{POS_config_1}
 }
 
-\caption{Tela da máquina POS mostrando as opções de configurações \subref{POS_inicial} Tela inicial do software. \subref{POS_config_1} Selecionada a opção Configurações, mostra as opções disponíveis. }
+\caption{Figura do processo de configuração. }
 \label{pos_config}
 \end{figure}
 
 
-Após o levantamento dos requisitos junto a empresa, conseguimos definir os seguintes ALIs, EEs, SEs e CEs:
 
-\begin{figure}
+Após o levantamento dos requisitos junto a empresa, conseguimos definir os ALIs, EEs, SEs e CEs e estes estão na figura \ref{POS_alis}, nesta tabela da figura \ref{pontos_fun_final_2} onde tem valores padrões do mercado segundo Pressman \cite{pressman2009engenharia}, assim eu consigo definir o total de pontos por função não-ajustados. Já na parte restrições impostas à funcionalidade do software, são pontos calculados a partir de requisitos não funcionais.
+Na parte inferior temos os total de pontos por função ajustados, onde está o total necessário de pontos por função para criar o software, o índice de produtividade, onde definido como sendo 6.5 pessoa-mês e o custo mês de uma pessoa, conseguimos encontrar o valor do software em R\$ 21,421,00. Estipulando que trabalhará apenas dois programadores, conseguimos definir que em 69.62 / (6.5 * 2 ) = 5.35, um pouco mais do que 5 meses para a conclusão do software.
+
+\begin{figure}[h!]
 \centering
 
 \includegraphics[width=6.6 in]{POS/pontos_fun_ali.png}
@@ -399,16 +393,14 @@ Após o levantamento dos requisitos junto a empresa, conseguimos definir os segui
 
 
 
-\caption{Mostrando todas as partes da métrica que conseguimos identificar pela prototipação e pelos requisitos }
+\caption{Figura mostrando todas as partes da métrica que conseguimos identificar pela prototipação e pelos requisitos }
 \label{POS_alis}
 \end{figure}
 
 
-Após este levantamento, coloco os dados da figura \ref{POS_alis}, nesta tabela da figura \ref{pontos_fun_final_2} onde tem valores padrões do mercado segundo Pressman \cite{pressman2009engenharia}, assim eu consigo definir o total de pontos por função não-ajustados. Já na parte restrições impostas à funcionalidade do software, são pontos calculados a partir de requisitos não funcionais.
-Na parte inferior temos os total de pontos por função ajustados, onde está o total necessário de pontos por função para criar o software, o índice de produtividade, onde definido como sendo 6.5 pessoa-mês e o custo mês de uma pessoa, conseguimos encontrar o valor do software em R\$ 21,421,54. Estipulando que trabalhará apenas dois programadores, conseguimos definir que em 69.62 / (6.5 * 2 ) = 5.35, um pouco mais do que 5 meses para a conclusão do software.
 
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 
 \includegraphics[width=6.6 in]{POS/pontos_fun_final_2.png}
@@ -421,24 +413,79 @@ Na parte inferior temos os total de pontos por função ajustados, onde está o tot
 \end{figure}
 
 
-A partir disso, podemos comparar o desenvolvimento do software com a compra de uma solução pronta, existe duas empresas que oferecem este serviço. Segue uma tabela demostrando as condições de cada empresa:
-	Empresa1
-		>Licença de R\$3 mil + R\$900,00 por mês
-		>R\$ 2 mil por cada máquina POS
-		
-	Empresa2
-		>Licença de R\$5 mil + R\$800,00 por mês
-			>R\$ 2 mil por cada máquina POS
-			
-			
-	Já desenvolvendo o software, conseguimos encontrar máquinas POS por até R\$ 500,00. DISCUTIR QUAL SERÁ A MELHOR OPÇÃO
 
+A partir disso, podemos comparar o desenvolvimento do software com a compra de uma solução pronta, existe duas empresas que oferecem este serviço. Segue uma tabela demostrando as condições de cada empresa:
+	
+			
+			
+\begin{table}[h!]
+\centering
+\begin{tabular}{cccc}
+\hline \hline
+Empresa & Licença & Mensalidade & Máquina POS   \\
+\hline
+%\hline $c_0$ & $3\times 10^8$ m/s & speed of light \\
+\hline 1 & R\$ 3 mil & R\$ 900,00 & R\$ 2 mil     \\  
+\hline 2 & R\$ 5 mil & R\$ 800,00 & R\$ 1.8 mil   \\  
+\hline
+\hline
+\end{tabular}
+\caption{Tabela com os valores das soluções prontas.}
+\label{empresas}
+\end{table}
+			
+			
+	Já desenvolvendo o software, conseguimos encontrar máquinas POS por até R\$ 500,00. Vamos analisar por uma perspectiva de 12 meses, onde na nossa estimativa será de 2 programadores, então durante 6 meses será apenas de desenvolvimento e a partir disso comprar as máquinas POS, conforme conversas com a empresa, uma qualidade inicial ideal seria de 3 máquinas. Na tabela abaixo, está a comparação dos gastos da empresa em 12 meses para cada tipo de negócio:
+	
+	
+\begin{table}[h!]
+\centering
+\begin{tabular}{cc}
+\hline \hline
+Solução & Gasto total em 12 meses   \\
+\hline
+%\hline $c_0$ & $3\times 10^8$ m/s & speed of light \\
+\hline Empresa 1 & R\$ 19.800 mil      \\  
+\hline Empresa 2 & R\$ 20.000 mil    \\  
+\hline Desenvolvimento & R\$ 22.921 mil   \\  
+\hline
+\hline
+\end{tabular}
+\caption{Tabela com os valores das soluções prontas.}
+\label{comparacao}
+\end{table}
+
+
+Como o desenvolvimento, tem seu retorno em longo prazo, vamos fazer uma comparação em 36 meses:
+
+	\begin{table}[h!]
+\centering
+\begin{tabular}{cc}
+\hline \hline
+Solução & Gasto total em 36 meses   \\
+\hline
+%\hline $c_0$ & $3\times 10^8$ m/s & speed of light \\
+\hline Empresa 1 & R\$ 41.400 mil      \\  
+\hline Empresa 2 & R\$ 39.200 mil    \\  
+\hline Desenvolvimento & R\$ 22.921 mil   \\  
+\hline
+\hline
+\end{tabular}
+\caption{Tabela com os valores das soluções prontas.}
+\label{comparacao}
+\end{table}		
+
+
+Podemos concluir, que com o desenvolvimento a empresa ficará sem nenhum retorno por 6 meses e a partir disso começar a faturar neste novo mercado, já com as soluções prontas, ela já pode faturar a partir do primeiro vez.
 
 \section{Planejamento da Avaliação da Proposta}
+Não sei como faço o planejamento da avaliação
+
 
 \section{Relato das Atividades Desenvolvidas e Experiências Vivenciadas}
 
-
+O estágio realizado na empresa Telvo Sistemas Computacionais teve como principal problema o detalhamento do mercado que a empresa quer se inserir, a empresa é uma startup, assim algumas vezes estavam sem tempo para me responder perguntas ou detalhar melhor os detalhes do que era necessário.
+Para encontrar este problema foi realizado várias entrevistas informais pessoalmente ou por e-mail com o dono da empresa, Lucas Campos, com o intuito de coletar os principais problemas enfrentados pela empresa para assim apontar e propor uma solução para o problema de maior significância.
 
 %\begin{figure}
 %\centering
