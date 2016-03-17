@@ -223,6 +223,7 @@ Conforme as discussões com os funcionários da Telvo, o problema foi evidenciado 
 
 O novo ramo que a empresa quer entrar é definido da seguinte forma, ela aluga estas máquinas POS onde são vendidos os ingressos para eventos ou shows e na hora da validação deste usa-se um smartphone para validar o código de barras impresso, O mercado de eventos está em fase de crescimento, onde movimentou R\$ 59 bilhões no ano de 2014 \cite{eventos} e a região de Jataí e entorno está carente deste tipo de solução.
 Após este levantamento, vimos a necessidade de alguns pontos:
+
 	- \textbf{Aquisição de máquinas POS}: Existe soluções pagas que entregam este ponto e o software pronto para estas máquinas POS ou podemos adquirir máquinas separadamente. 
 	
 	- \textbf{Software para funcionar nas máquinas POS}: As soluções pagam na entregam isto junto, mas podemos desenvolver as solução para estas máquinas POS.
@@ -238,34 +239,81 @@ Após este levantamento, vimos a necessidade de alguns pontos:
 
 \section{Proposta de Intervenção}
 
-Sobre os problemas expostos, precisamos mostrar se será melhor adquirir uma solução pronta ou a empresa desenvolver o próprio software, iremos avaliar o desenvolvimento do software a partir de métricas de ponto por fusão. Primeiramente iremos trabalhar com prototipação para gerar as telas deste sistema para conseguir calcular o esforço para desenvolver este sistema.
+Sobre os problemas expostos, precisamos mostrar se será melhor adquirir uma solução pronta ou a empresa desenvolver o próprio software, iremos avaliar o desenvolvimento do software a partir de métricas de ponto por função. Primeiramente iremos trabalhar com prototipação para gerar as telas deste sistema para conseguir calcular o esforço e custo para desenvolver este sistema.
 
-Para estipular o preço do software que será usado na máquina POS, nós usaremos a metrica pontos por fusão e utilizaremos os padrões da literatura para valores padrões para está metrica, Segunda Pressman \cite{pressman2009engenharia}, "A métrica ponto de função pode ser usada efetivamente como um meio para medir a funcilidade fornecidade por um sistema... ela pode ser empreada para estimar o custo ou trabalho necessário para projetar, codificar e testar o software".
+Para estipular o preço do software que será usado na máquina POS, nós usaremos a métrica pontos por função e utilizaremos os padrões da literatura para valores padrões para está métrica, Segunda Pressman \cite{pressman2009engenharia}, "A métrica ponto de função pode ser usada efetivamente como um meio para medir a funcionalidade fornecida por um sistema... ela pode ser empregada para estimar o custo ou trabalho necessário para projetar, codificar e testar o software".
 
 
 Esta métrica separa o software em partes a partir do seus requisitos funcionais e dividi elas para facilitar a valoração:
+ \begin{itemize}
+   \item \textbf{Arquivos Lógicos Internos(ALI)}: armazenam dados mantidos pelo software
+   			\begin{itemize}
+   				\item Tabelas que armazenam dados mantidos pelo software;
+   				\item Arquivos de configuração;
+   				\item Arquivos de segurança de acesso ao software;
+ 			\end{itemize}
+ 			
+   \item \textbf{Arquivos de Interface Externa(AIE)}: é um ALI de outro sistema com o qual o software deve comunicar.
+   			 \begin{itemize}
+  				 \item Arquivo de referência externa utilizado pelo software (uma tabela do banco de dados de outro sistema)
+   				
+ 			\end{itemize}
+ 			
+ 	  \item \textbf{Entradas Externas (EE)}: Trata-se de um processo que trabalha com dados ou informações de controle que vêm do lado de fora da fronteira do software.
+ 	     		\begin{itemize}
+  				 \item Intenção de manter um ou mais ALIs.
+   				
+ 			\end{itemize}
+ 			
+ 	  \item  \textbf{Saídas Externas (SE)}: trata-se de um processo que envia dados ou informações de controle para fora da fronteira do software.
+ 	  
+ 	  		\begin{itemize}
+  				 \item Sua lógica de processamento deve conter ao menos uma fórmula matemática ou cálculo, ou criar dados derivados.
+   				
+ 			\end{itemize}
+ 			
+ 	\item \textbf{Consultas externas(CE)}: é um tipo de SE, porém seu processamento não deve conter fórmula matemática ou cálculo, nem gerar dados derivados.
 
-- \textbf{Arquivos Lógicos Internos(ALI)}: armazenam dados mantidos pelo software
+ 	  		\begin{itemize}
+  				 \item Recuperação de dados ou informações de controle.
+   				
+ 			\end{itemize}
+ \end{itemize}
 
-	> Tabelas que armazenam dados mantidos pelo software;
-	> Arquivos de configuração;
-	> Arquivos de segurança de acesso ao software;
-	
-- \textbf{Arquivos de Interface Externa(AIE)}: é um ALI de outro sistema com o qual o software deve comunicar.
 
-	> Arquivo de referência externa utilizado pelo software (uma tabela do banco de dados de outro sistema)
 
-- \textbf{Entradas Externas (EE)}: Trata-se de um processo que trabalha com dados ou informações de controle que vêm do lado de fora da fronteira do software.
 
-	> Intenção de manter um ou mais ALIs.
 
-- \textbf{Saídas Externas (SE)}: trata-se de um processo que envia dados ou informações de controle para fora da fronteira do software.
+% \begin{itemize}
+%   \item item1
+%   \item item2
+% \end{itemize}
 
-	> Sua lógica de processamento deve conter ao menos uma fórmula matemática ou cálculo, ou criar dados derivados.
-
-- \textbf{Consultas externas(CE)}: é um tipo de SE, porém seu processamento não deve conter fórmula matemática ou cálculo, nem gerar dados derivados.
-
-	> Recuperação de dados ou informações de controle.
+%- \textbf{Arquivos Lógicos Internos(ALI)}: armazenam dados mantidos pelo software
+%
+%	> Tabelas que armazenam dados mantidos pelo software;
+%	> Arquivos de configuração;
+%	> Arquivos de segurança de acesso ao software;
+%	
+%	
+%	
+%- \textbf{Arquivos de Interface Externa(AIE)}: é um ALI de outro sistema com o qual o software deve comunicar.
+%
+%	> Arquivo de referência externa utilizado pelo software (uma tabela do banco de dados de outro sistema)
+%
+%- \textbf{Entradas Externas (EE)}: Trata-se de um processo que trabalha com dados ou informações de controle que vêm do lado de fora da fronteira do software.
+%
+%
+%
+%	> Intenção de manter um ou mais ALIs.
+%
+%- \textbf{Saídas Externas (SE)}: trata-se de um processo que envia dados ou informações de controle para fora da fronteira do software.
+%
+%	> Sua lógica de processamento deve conter ao menos uma fórmula matemática ou cálculo, ou criar dados derivados.
+%
+%- \textbf{Consultas externas(CE)}: é um tipo de SE, porém seu processamento não deve conter fórmula matemática ou cálculo, nem gerar dados derivados.
+%
+%	> Recuperação de dados ou informações de controle.
 	
 	
 	Cada parte da métrica, tem uma escala conforme os ALIs e a quantidade de atributos referenciados, conforme as figuras abaixo. Na figura \subref{pontos_fun_1} contém a tabela referente a contagem de atributos de ALI e AIE, já na tabela da figura \subref{pontos_fun_2} contém a referencias para a contagem de CE, EE, SE. 
