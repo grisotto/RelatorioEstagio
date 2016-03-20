@@ -251,7 +251,7 @@ Empresa & Licença & Mensalidade & Máquina POS   \\
 	
 	A empresa não tem este capital de investimento inicial como sendo \textit{startup}, assim para conseguir isso ela deve pagar a licença, comprar no mínimo 3 máquinas e a mensalidade, fazendo 2 grandes shows por mês que normalmente é cobrado 2\% do valor total de ingressos vendidos e este normalmente fica em torno de R\$50.000,00, tirando os 2\% de lucro, assim R\$1.000,00. Somando o valor das despesas por 9 meses fica em torno de R\$17.100,00 e na perspectiva acima, em 9 meses a empresa teria R\$18.000,00 de lucro, com isso, observamos que a empresa estaria 9 meses trabalhando para pagar o seu investimento e a partir disso ela começaria a ter lucro de verdade.
 	
-	Para ter a mesma perspectiva com o desenvolvimento do software, nós levantamos os requisitos e precisamos definir o custo do software para podermos comparar com a solução pronta.
+	Para ter a mesma perspectiva com o desenvolvimento do software, nós levantamos os requisitos e precisamos definir o custo do software para podermos comparar com a solução pronta. Além disso, a empresa já conta com mão de obra qualificada, que são alunos do curso da ciência da computação da UFG que trabalhando no processo de desenvolvimento de software.
 	
 	
 
@@ -278,11 +278,11 @@ Sobre os problemas expostos, precisamos mostrar se será melhor adquirir uma solu
 
 
 
-Esta métrica separa o software em partes a partir do seus requisitos funcionais e dividi elas para facilitar a valoração:
+Esta métrica separa o software em partes a partir do seus requisitos funcionais e divide elas para facilitar a valoração:
  \begin{itemize}
    \item \textbf{Arquivos Lógicos Internos(ALI)}: armazenam dados mantidos pelo software
    			\begin{itemize}
-   				\item Tabelas que armazenam dados mantidos pelo softw are;
+   				\item Tabelas que armazenam dados mantidos pelo software;
    				\item Arquivos de configuração;
    				\item Arquivos de segurança de acesso ao software;
  			\end{itemize}
@@ -350,7 +350,7 @@ Esta métrica separa o software em partes a partir do seus requisitos funcionais 
 %	> Recuperação de dados ou informações de controle.
 	
 	
-	Cada parte da métrica, tem uma escala conforme os ALIs e a quantidade de atributos referenciados, conforme as figuras abaixo. Na figura \subref{pontos_fun_1} contém a tabela referente a contagem de atributos de ALI e AIE, já na tabela da figura \subref{pontos_fun_2} contém a referencias para a contagem de CE, EE, SE. 
+	Cada parte da métrica, tem uma escala conforme os ALIs e a quantidade de atributos referenciados, conforme a figura \ref{pos_venda_ingresso2}. Na figura \ref{pontos_fun_1} contém a tabela referente a contagem de atributos de ALI e AIE, já na tabela da figura \ref{pontos_fun_2} contém a referencias para a contagem de CE, EE, SE. 
 	
 	
 	
@@ -368,7 +368,7 @@ Esta métrica separa o software em partes a partir do seus requisitos funcionais 
 
 
 \caption{Na figura \subref{pontos_fun_1} contém a tabela referente a contagem de atributos de ALI e AIE, já na tabela da figura \subref{pontos_fun_2} contém a referencias para a contagem de CE, EE, SE  }
-\label{pos_venda_ingresso}
+\label{pos_venda_ingresso2}
 \end{figure}
 
 
@@ -376,39 +376,48 @@ Esta métrica separa o software em partes a partir do seus requisitos funcionais 
 	
 	
 
-Vamos agora, analisar as telas do protótipo do software, para poder usar a métrica ponto por função:
+Vamos agora, analisar as telas do protótipo do software, para poder usar a métrica ponto por função, para simplificação na figura \ref{pos_exemplo} está como o sistema seria numa máquina POS, porém nas outras imagens usaremos simplesmente a tela do sistema em si por simplicidade.
+
+\begin{figure}[h!]
+\centering
+
+\includegraphics[width=1.6 in]{POS/1-Tela_pos_1.png}
+
+\caption{Figura mostrando uma máquina POS. }
+\label{pos_exemplo}
+\end{figure}
 
 
 Neste caso vamos analisar a figura \ref{pos_venda_ingresso} o processo de venda de ingressos, que também é similar ao impressão de cortesias e reimpressão:
 
-Diagrama sequencial na máquina POS, demostrando o processo de venda de ingressos. \subref{POS_inicial} Tela inicial do software. \subref{POS_ingresso_1} Selecionada a opção Ingresso, mostra as opções disponíveis. \subref{POS_ingresso_2} Nesta tela, a partir de Venda, digite 1 para feminino e 2 para masculino \subref{POS_ingresso_3} Nesta parte coloca-se o código dos ingressos, um número apenas do contratante para ter controle sobre fraudes de ingressos. \subref{POS_ingresso_4} Digita-se a quantidade de ingressos e só aguardar a impressão.
+Diagrama sequencial na máquina POS, demostrando o processo de venda de ingressos. \ref{POS_inicial2} Tela inicial do software. \ref{POS_ingresso_1} Selecionada a opção Ingresso, mostra as opções disponíveis. \ref{POS_ingresso_2} Nesta tela, a partir de Venda, digite 1 para feminino e 2 para masculino \ref{POS_ingresso_3} Nesta parte coloca-se o código dos ingressos, um número apenas do contratante para ter controle sobre fraudes de ingressos. \ref{POS_ingresso_4} Digita-se a quantidade de ingressos e só aguardar a impressão.
 
 	
 \begin{figure}[h!]
 \centering
 \subfigure{a)
-\includegraphics[width=1.6 in]{POS/1-Tela_pos_1.png}
-\label{POS_inicial}
+\includegraphics[width=1.6 in]{POS/1-Tela_pos_1_a.png}
+\label{POS_inicial2}
 }
 \subfigure{b)
 
-\includegraphics[width=1.6 in]{POS/2-pos_ingre_1_B.png}
+\includegraphics[width=1.6 in]{POS/2-pos_ingre_1_a.png}
 \label{POS_ingresso_1}
 }
 \subfigure{c)
 
-\includegraphics[width=1.6 in]{POS/2-pos_ingre_11_B.png}
+\includegraphics[width=1.6 in]{POS/2-pos_ingre_11_a.png}
 \label{POS_ingresso_2}
 }
 \\
 \subfigure{d)
 
-\includegraphics[width=1.6 in]{POS/4-pos_ingr_3_B.png}
+\includegraphics[width=1.6 in]{POS/4-pos_ingr_3_a.png}
 \label{POS_ingresso_3}
 }
 \subfigure{e)
 
-\includegraphics[width=1.6 in]{POS/5-pos_ingr_4_B.png}
+\includegraphics[width=1.6 in]{POS/5-pos_ingr_4_a.png}
 \label{POS_ingresso_4}
 }
 \caption{Figura do processo de venda de um ingresso. }
@@ -419,22 +428,22 @@ Diagrama sequencial na máquina POS, demostrando o processo de venda de ingressos
 
 Outro processo do software seria o de imprimir relatórios, e neste está descrito no processo da figura \ref{POS_rela}:
 
-Diagrama sequencial na máquina POS, demostrando o processo de impressão de ingressos. \subref{POS_inicial} Tela inicial do software. \subref{POS_rela_1} Selecionada a opção Relatório, mostra as opções disponíveis. \subref{POS_rela_2} Nesta tela, você pode ver relatório do evento, que é descrição sobre informações do contratante e código secreto. Na opção Vendas, você tem um relatório completo das vendas dos ingressos e a receita. 
+Diagrama sequencial na máquina POS, demostrando o processo de impressão de ingressos. \ref{POS_inicial3} Tela inicial do software. \ref{POS_rela_1} Selecionada a opção Relatório, mostra as opções disponíveis. \ref{POS_rela_2} Nesta tela, você pode ver relatório do evento, que é descrição sobre informações do contratante e código secreto. Na opção Vendas, você tem um relatório completo das vendas dos ingressos e a receita. 
 
 \begin{figure}[h!]
 \centering
 \subfigure{a)
-\includegraphics[width=1.6 in]{POS/1-Tela_pos_1.png}
-\label{POS_inicial}
+\includegraphics[width=1.6 in]{POS/1-Tela_pos_1_a.png}
+\label{POS_inicial3}
 }
 \subfigure{b)
 
-\includegraphics[width=1.6 in]{POS/7-pos_rela_1_B.png}
+\includegraphics[width=1.6 in]{POS/7-pos_rela_1_a.png}
 \label{POS_rela_1}
 }
 \subfigure{c)
 
-\includegraphics[width=1.6 in]{POS/8-pos_rela_2_B.png}
+\includegraphics[width=1.6 in]{POS/8-pos_rela_2_a.png}
 \label{POS_rela_2}
 }
 
@@ -444,17 +453,17 @@ Diagrama sequencial na máquina POS, demostrando o processo de impressão de ingre
 
 O outro processo, são as opções de configurações, que está sendo mostrado na figura \ref{pos_config}:
 
-Tela da máquina POS mostrando as opções de configurações \subref{POS_inicial} Tela inicial do software. \subref{POS_config_1} Selecionada a opção Configurações, mostra as opções disponíveis.
+Tela da máquina POS mostrando as opções de configurações \ref{POS_inicial} Tela inicial do software. \ref{POS_config_1} Selecionada a opção Configurações, mostra as opções disponíveis.
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
 \subfigure{a)
-\includegraphics[width=1.6 in]{POS/1-Tela_pos_1.png}
+\includegraphics[width=1.6 in]{POS/1-Tela_pos_1_a.png}
 \label{POS_inicial}
 }
 \subfigure{b)
 
-\includegraphics[width=1.6 in]{POS/6-pos_conf_B.png}
+\includegraphics[width=1.6 in]{POS/6-pos_conf_a.png}
 \label{POS_config_1}
 }
 
@@ -496,13 +505,6 @@ Na parte inferior temos os total de pontos por função ajustados, onde está o tot
 
 
 
-A partir disso, podemos comparar o desenvolvimento do software com a compra de uma solução pronta, existe duas empresas que oferecem este serviço. Segue uma tabela demostrando as condições de cada empresa:
-	
-			
-			
-
-			
-			
 	Já desenvolvendo o software, conseguimos encontrar máquinas POS por até R\$ 500,00. Vamos analisar por uma perspectiva de 12 meses, onde na nossa estimativa será de 2 programadores, então durante 6 meses será apenas de desenvolvimento e a partir disso comprar as máquinas POS, conforme conversas com a empresa, uma qualidade inicial ideal seria de 3 máquinas. Na tabela abaixo, está a comparação dos gastos da empresa em 12 meses para cada tipo de negócio:
 	
 	
@@ -544,16 +546,39 @@ Solução & Gasto total em 36 meses   \\
 \end{table}		
 
 
-Podemos concluir, que com o desenvolvimento a empresa ficará sem nenhum retorno por 6 meses e a partir disso começar a faturar neste novo mercado, já com as soluções prontas, ela já pode faturar a partir do primeiro vez.
+Podemos concluir, que com o desenvolvimento a empresa ficará sem nenhum retorno por 6 meses e a partir disso começar a faturar neste novo mercado, já com as soluções prontas, ela já pode faturar a partir do primeiro vez. Mas o desenvolvimento mostra ser muito mais vantajoso em vários aspectos e principalmente financeiro e caso a empresa expanda bastante, o custo de escalabilidade é bem abaixo de uma solução pronta.
 
 \section{Planejamento da Avaliação da Proposta}
-Não sei como faço o planejamento da avaliação
+Nós iremos avaliar, a proposta com a elaboração completa do projeto de software e acompanhar através da metodologia ágil \textit{Scrum}, que é uma metodologia para gestão e planejamento de projetos de software, nela são entregues partes do software por um período e este processo é chamado de \textit{sprint}. No nosso caso iremos definir 2 semanas como o prazo para cada \textit{sprint} e nele deve ser entregue cada parte do software definido no projeto, estas partes estão definidas como uma lista priorizada de tarefas a serem entregues. Compararemos as atividades do \textit{sprint} atual para avaliar a conclusão do desenvolvimento do software, e de acordo com o nosso cronograma de quase 6 meses, geram um total de 15 \textit{sprints} considerando uma margem de erro de 30\%, com isso após estes 15 o sistema deverá ter sido concluído.
+
+
+Para avaliar a construção do software a partir do projeto, iremos utilizar o paradigma Goal/Question/Metric(GQM)\cite{FONTOURA} que consiste em uma abordagem orientada a metas e utilizada em engenharia de software para a medição de produtos e processos de software.
+
+   			\begin{itemize}
+   				\item \textbf{Objetivo}: verificar se o software foi elaborado cumprindo o prazo estipulado pelo cronograma de \textit{sprints} e se atendeu os objetivos da empresa, isto é, os requisitos funcionais.
+   				\item \textbf{Questões}: 
+   				   			\begin{itemize}
+   				\item O projeto foi concluído no tempo definido pelo prazo estipulado?
+   				\item O projeto satisfaz os requisitos elicitados no projeto do software?
+
+ 			\end{itemize}
+   				\item Métricas:
+   		\begin{itemize}
+   				\item \#MTR1: DEFINIR AS METRICAS?!?
+   				\item \#MTR2: DEFINIR AS METRICAS?!?
+
+ 			\end{itemize}
+ 			\end{itemize}
 
 
 \section{Relato das Atividades Desenvolvidas e Experiências Vivenciadas}
 
 O estágio realizado na empresa Telvo Sistemas Computacionais teve como principal problema o detalhamento do mercado que a empresa quer se inserir, a empresa é uma startup, assim algumas vezes estavam sem tempo para me responder perguntas ou detalhar melhor os detalhes do que era necessário.
-Para encontrar este problema foi realizado várias entrevistas informais pessoalmente ou por e-mail com o dono da empresa, Lucas Campos, com o intuito de coletar os principais problemas enfrentados pela empresa para assim apontar e propor uma solução para o problema de maior significância.
+Para encontrar este problema foi realizado várias reuniões com o dono da empresa, Lucas Campos, com o intuito de coletar os principais problemas enfrentados pela empresa para assim apontar e propor uma solução para o problema de maior significância. Após, eu voltei aos livros utilizados nas disciplinas de engenharia de software e projeto de software para revisão o conteúdo aprendido e aplica-lo no que foi descrito na proposta de intervenção.
+
+
+
+ 
 
 %\begin{figure}
 %\centering
@@ -659,6 +684,9 @@ Para encontrar este problema foi realizado várias entrevistas informais pessoalm
 \bibitem{eventos} Como crescer no mercado de eventos em época de crise http://www.abeoc.org.br/2015/04/como-crescer-no-mercado-de-eventos-em-epoca-de-crise/
 
 \bibitem{pressman2009engenharia} Pressman, R. S. \textit{Engenharia de software}. AMGH Editora, 2009
+
+\bibitem{FONTOURA} FONTOURA M.Sc, LISANDRA M, et. Al, \textit{Usando GQM para Gerenciar Riscos
+em Projetos de Software}. Ed. UFRS, 2004.
 
 
 %\bibitem{API2} S. M. Grisotto, A. Grisotto, and J.-P. Grisotto,  \textit{Artigo sobre a familia grisotto, haha}. Jornal da familia, \href{10.1109/JLT.2008.200883123}{\textbf{27} (2015) 31348-2356}.
