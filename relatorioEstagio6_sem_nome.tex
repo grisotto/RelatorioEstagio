@@ -1,0 +1,690 @@
+\documentclass[12pt,a4paper]{article}
+
+% estes dois inputenc são para o mac conseguir ler os acentos gráficos em portugues
+% mas apenas o utf8 funciona no meu computador
+%\usepackage[applemac]{inputenc}
+%\usepackage[utf8]{inputenc}
+% \usepackage[portuges,brazilian]{babel}
+
+% esse inputenc é para o windows ler os acentos gráficos, e não funciona no mac
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{lmodern}
+
+%package para fazer figuras a e b automaticamente
+\usepackage{subfigure}
+
+\usepackage{makeidx}
+\usepackage{latexsym}
+%appendix
+\usepackage[title,titletoc,toc]{appendix}
+
+\usepackage{titlesec}
+\titleformat{\paragraph}[runin]{\normalfont\normalsize\itshape}{\theparagraph}{}{}[.] %format paragraph italic and ser a period after it
+\titlespacing{\paragraph}{0pt}{0pt}{*1} %remove spacing and add one characterspace after paragraph
+
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+
+%esse package é para fazer multirow nas tabelas
+\usepackage{multirow}
+
+\usepackage{sidecap}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{capt-of}
+\usepackage[left=2.0cm, right=2.0cm, top=4.0cm,bottom=3.0cm]{geometry}%normas icontec
+%\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{calc}
+\usepackage{titletoc}
+\usepackage{indentfirst}
+\usepackage{pifont}
+\usepackage{hyperref}
+\hypersetup{ colorlinks,
+linkcolor=blue,
+filecolor=blue,
+urlcolor=blue,
+citecolor=blue }
+\usepackage{microtype}
+\usepackage[nottoc]{tocbibind} 
+
+\usepackage{graphicx,color}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+
+%para colocar superscript na esquerda
+\usepackage{leftidx}% http://ctan.org/pkg/leftidx
+
+\usepackage{listings} % package para escrever codigo no texto
+
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+%\lstset{frame=tb,
+%  language=Matlab,
+%  aboveskip=3mm,
+%  belowskip=3mm,
+%  showstringspaces=false,
+%  columns=flexible,
+%  basicstyle={\small\ttfamily},
+%  numbers=none,
+%  numberstyle=\tiny\color{gray},
+%  keywordstyle=\color{blue},
+%  commentstyle=\color{dkgreen},
+%  stringstyle=\color{mauve},
+%  breaklines=true,
+%  breakatwhitespace=true
+%  tabsize=3
+%}
+
+\lstset{ %
+  language=R,                     % the language of the code
+  basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular undica é música ilimitada no seu smartphoerscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included ica é música ilimitada no seu smartphowith \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{blue},      % keyword style
+  commentstyle=\color{dkgreen},   % comment style
+  stringstyle=\color{mauve},      % string literal style
+  escapeinside={\%*}{*)},         % if you want to add a comment within your code
+  morekeywords={*,...}            % if you want to add more keywords to the set
+} 
+
+% para incluir arquivos pdf, usando o comando \includepdf
+\usepackage{pdfpages}
+\usepackage{authblk}
+\usepackage{siunitx}
+
+\usepackage{mhchem} %used to write chemical formulas
+
+% altera a fonte nas legendas das figuras
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+
+% este define o espacamento entre as linhas
+% para referencia, 1.5 'e um espacamento grande, utilizado na minha teseica é música ilimitada no seu smartpho de doutorado
+\renewcommand*{\baselinestretch}{1.2}
+\baselineskip 0.75cm
+\parindent = 0.7cm
+\parskip = 0.0cm
+\addtolength{\skip\footins}{1cm}
+
+\usepackage{graphicx}
+
+%macros para gerar o r cursivo do griffiths
+\def\rcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=25mm,
+ right=25mm,
+ top=25mm,
+ bottom=25mm,
+ }
+ 
+ %package para escrever comentarios
+%\usepackage[portuguese,textwidth=3.5cm,textsize=small]{todonotes}%antes de publicar colocar como opçao [disable] para apagar todos os comentarios
+%\usepackage[utf8]{inputenc} 
+%\usepackage[textwidth=1.5cm,textsize=small]{todonotes}%antes de publicar colocar como opçao [disable] para apagar todos os comentarios
+
+\usepackage{xargs}                      % Use more than one optional parameter in a new commands
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=footnotesize]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+ 
+ 
+%don't want date printed
+\date{}
+\title{\Large \bf Comparação entre Desenvolvimento ou Compra de Solução Comercial para o Mercado de \textit{Shows} e Eventos}
+\author[1]{\bf }
+%\author[1]{\bf de Oliveira, T. B.}
+%\affil[1]{Instituto de Ciências Exatas e Tecnológicas (ICET),  Universidade Federal de Goiás
+%  (UFG)\\
+%  Jataí -- GO, Brasil}
+%\affil[ ]{\textit { \{rafaelgrisotto, thborges\}@gmail.com}}
+
+
+\renewcommand\Authands{ e } 
+
+
+
+
+\begin{document} 
+ \maketitle
+
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+%\vspace*{1cm}
+
+
+
+
+
+     
+
+
+
+\section{Introdução}
+
+O ramo de tecnologia da informação(TI) está crescendo, integrando muitas áreas e fazendo antigos paradigmas de negócios serem transformados \cite{tapscott}. Com isso, novas empresas de TI estão prosperando, na chamada era digital \cite{walton}. Uma das formas que as empresas de TI utilizam para prosperarem é participarem em incubadoras \cite{xavier}, que disponibilizam ambientes adequados à transformação de ideias em produtos e serviços, fornecendo à empresa incubada serviços essenciais para operações, como suporte administrativo e jurídico.  \par 
+
+
+A empresa Telvo Sistemas Computacionais é uma empresa jovem e está incubada na Beecth, incubadora tecnológica da Universidade Federal de Goiás da Regional Jataí. Atualmente a empresa desenvolve soluções em na área de TI, tais como websites, soluções com biometria, aplicações web e \textit{desktop}, e também aplicações moveis. A empresa esta interessada em entrar no ramo de sistemas para máquinas POS (\textit{Point of sale}), que são ponto de venda ou ponto de serviço com mobilidade até o cliente.
+
+\indent Estas maquinas POS, mais conhecidas como maquinas de cartão de crédito e débito proporcionam ao comerciante de produtos ou serviços, mobilidade e agilidade no momento do cliente efetuar o pagamento. Esta tecnologia conta com a confiabilidade no processo de cobrança, pois garante transmissão dos dados apenas entre a máquina POS e a operadora do cartão. 
+
+
+
+\indent Conforme entrevistas com o CEO da empresa Telvo e também com supervisor deste estágio, a empresa pretende entrar no ramo de venda de ingressos para eventos e shows e integrar a ideia das máquinas POS com aplicações moveis, existem algumas soluções comerciais com este proposito, porém de custo elevado e a empresa quer avaliar a melhor opção entre adquirir a solução comerciais ou desenvolver a sua própria. Ambas opções possuem vantagens e desavantagens. As principais desvantagens da solução comercial são o custo e a inviabilidade de customização. As desvantagem de construir uma solução própria são o tempo e custo do desenvolvimento bem como o custo de oportunidade do capital, durante o ciclo de desenvolvimento.
+
+\indent Sendo assim, o objetivo principal do estagio foi avaliar solução comercial,considerando o investimento inicial e quando a empresa terá retorno com a mesma, ou a opção da própria empresa desenvolver a solução a partir da sua atual realidade como \textit{startup}.
+
+
+
+
+
+\section{Diagnóstico da Situação Problema}
+
+Conforme as discussões com os funcionários da Telvo, o problema foi evidenciado a partir de uma reunião agendada com o dono da empresa onde foram relatados os requisitos funcionais e não funcionais da solução desejada. Durante a discussão foi relatado que a empresa na condição de \textit{startup}, onde a falta de recursos aliada à insegurança de viabilizar o projeto fazem delas irem e virem, tanto podem ficar milionárias ou entrar em falência num período curto de tempo \cite{perin}. Os recursos para contratar pessoal, são escassos e deve-se preocupar em selecionar a melhor solução para conseguir entrar neste mercado.
+
+
+A operação do novo ramo que a empresa quer entrar é descrita da seguinte forma: A empresa aluga máquinas POS onde são vendidos os ingressos para eventos ou shows e na hora da validação, confirmação da autenticidade dos ingressos, deste usa-se um smartphone para validar o código de barras impresso. O mercado de eventos está em fase de crescimento, e movimentou R\$ 59 bilhões no ano de 2014 \cite{eventos} e a região de Jataí e entorno está carente deste tipo de solução conforme relatado pela empresa.
+
+Após este levantamento, vimos a necessidade de alguns pontos:
+
+	- \textbf{Aquisição de máquinas POS}: Existe soluções pagas que entregam este ponto e o software pronto para as máquinas POS ou pode-se adquirir máquinas separadamente. 
+	
+	- \textbf{Software para operar as máquinas POS}: As soluções comerciais entregam isto junto, mas pode-se desenvolver a solução para a máquina POS.
+	
+	O modelo de negócio das empresas que vendem a solução comercial consiste no licenciamento inicial da solução e numa mensalidade, além da exclusividade da compra da máquina POS. A tabela \ref{empresas} apresenta os valores de duas empresas que oferecem esta solução:
+	
+	\begin{table}[h!]
+\centering
+\begin{tabular}{cccc}
+\hline \hline
+Empresa & Licença & Mensalidade & Máquina POS   \\
+\hline
+%\hline $c_0$ & $3\times 10^8$ m/s & speed of light \\
+\hline 1 & R\$ 3 mil & R\$ 900,00 & R\$ 2 mil     \\  
+\hline 2 & R\$ 5 mil & R\$ 800,00 & R\$ 1.8 mil   \\  
+\hline
+\hline
+\end{tabular}
+\caption{Tabela com os valores das soluções prontas.}
+\label{empresas}
+\end{table}
+	
+	
+	Na segunda opção, que consiste no desenvolvimento do software pela própria Telvo, pode-se comprar de qualquer fabricante e estas custam a partir de R\$500,00, comprando-as em lojas brasileiras. Neste caso, a máquina POS não vem com software para o propósito da empresa, que é a venda de ingressos para shows e eventos, sendo necessário portanto, o seu desenvolvimento.
+	
+	Na condição de \textit{startup}, a empresa não tem capital de investimento inicial. Para adquirir a solução, a Telvo deve pagar a licença, comprar no mínimo três máquinas e pagar a mensalidade. Fazendo dois grandes shows por mês, que é alugando as máquinas POS e o sistema para \textit{promoters} de eventos, e cobrando 2\% do valor dos ingressos R\$50.000,00, tirando os 2\% de lucro, assim R\$1.000,00. O valor total das despesas por 9 meses fica em torno de R\$17.100,00 e na perspectiva descrita, em 9 meses a empresa teria R\$18.000,00 de retorno. Com isso, observamos que a empresa levaria 9 meses para pagar o investimento. A  partir disso ela começaria a ter lucro mensal.
+	
+	Para ter a mesma perspectiva com o desenvolvimento do software, foram levantados os requisitos e precisou-se definir o custo do software para comparar com a solução comercial. Além disso, a empresa já conta com mão de obra qualificada, que são estagiários do curso da ciência da computação da UFG que trabalham no processo de desenvolvimento de software.
+	
+	A próxima seção descreve o levantamento de requisitos e estima o esforço e cronograma da construção de software e apresenta uma comparação das duas opções.
+	
+
+
+
+
+
+
+
+
+\section{Proposta de Intervenção}
+
+Sobre os problemas expostos na seção anterior, precisou-se avaliar se melhor adquirir uma solução comercial ou a empresa desenvolver o próprio software. Para obter o esforço e cronograma do software, utilizou-se a técnica de conversão de elementos de interface (GUI) para pontos de função. Nesta técnica, defina-se os requisitos funcionais para construir os protótipos de tela, e depois classifica-se os protótipos para obter os pontos de função. A partir dos pontos de função calcula-se o esforço em homens/hora e o cronograma em meses.
+
+Os requisitos levantados foram, R para requisito funcional e RN para requisito não funcional:
+ 
+
+   			\begin{itemize}
+   				\item R1 - O usuário deve ser capaz de fazer venda de ingressos e este pode ser por gênero sexual.
+   				\item R2 - O usuário deve ser capaz de gerar ingressos cortesias.
+   				\item R3 - O usuário deve ser capaz de reimprimir o último ingresso vendido.
+   				\item R4 - O usuário deve ser capaz de testar a configuração com os servidores remotos.
+   				\item R5 - O usuário deve ser capaz de obter informações do terminal POS, estas sendo data, hora e nome do evento.
+   				\item R6 - O usuário deve ser capaz de reiniciar a configuração da máquina POS, obtendo estas configurações de um servidor remoto.
+   				\item R7 - O usuário deve ser capaz de reiniciar a máquina POS.
+   				\item R8 - O usuário deve ser capaz de após fazer a venda de um ingresso, ter um papel impresso com os seguintes dados: nome do evento, gênero sexual, código do ingresso, valor do ingresso, código de barras do ingresso.
+   				\item R9 - O usuário deve ser capaz de após gerar um ingresso do tipo cortesia, ter um papel impresso com os seguintes dados: nome do evento, código do ingresso, código de barras do ingresso.
+   				\item R10 - O usuário deve ser capaz de gerar relatórios da venda de ingressos.
+   				
+   				\item R11 - O usuário deve ser capaz de gerar relatório do evento configurado na máquina POS, este contendo os seguintes dados: código do evento, nome do evento e nome do contratante.
+   				\item R12 - O administrador deve ser capaz de criar, alterar ou deletar o tipo e preço dos ingressos a partir de uma senha.
+   				\item RN1 - Solicitar senha do usuário caso ele solicite as informações do terminal POS e tente gerar qualquer um dos relatórios.
+   				\item RN2 - A máquina POS deve testar a viabilidade de conexão com a internet a cada 5 minutos.
+ 			\end{itemize}
+
+
+ Com a prototipação, calculou-se o esforço e custo para desenvolver este sistema estimando o custo do software que será usado na máquina POS. Usou-se a técnica de pontos por função e com os valores padrões da literatura para conversão de elementos de interface para pontos de função. Segundo Pressman \cite{pressman2009engenharia}, a métrica ponto por função é usada amplamente para avaliar os requisitos funcionais de um sistema e ser utilizada para determinar o custo necessário para implementar um software.
+
+
+
+
+
+	
+	
+
+Vamos agora, analisar as telas do protótipo do software, para poder usar a métrica ponto por função. Para exemplificação, a figura \ref{pos_exemplo} ilustra como o sistema seria numa máquina POS. Nos outros protótipos usaremos simplesmente a tela do sistema por questão de espaço.
+
+\begin{figure}[h!]
+\centering
+
+\includegraphics[width=1.2 in]{POS/1-Tela_pos_1.png}
+
+\caption{Figura mostrando uma máquina POS. }
+\label{pos_exemplo}
+\end{figure}
+
+
+A figura \ref{pos_venda_ingresso} apresenta os protótipos do requisito 1 e 8 que é o processo de venda de ingressos, que também é similar ao impressão de cortesias e reimpressão que são os requisitos 2, 3 e 9:
+
+Diagrama sequencial na máquina POS, demostrando o protótipo dos requisitos 1 e 8 de venda de ingressos. \ref{POS_inicial2} Tela inicial do software. \ref{POS_ingresso_1} Selecionada a opção Ingresso, mostra as opções disponíveis. \ref{POS_ingresso_2} Nesta tela, a partir de Venda, digite 1 para feminino e 2 para masculino \ref{POS_ingresso_3} Nesta parte coloca-se o código dos ingressos, um número apenas do contratante para ter controle sobre fraudes de ingressos. \ref{POS_ingresso_4} Digita-se a quantidade de ingressos e só aguardar a impressão.
+
+	
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=1.5 in]{POS/1-Tela_pos_1_a.png}
+\label{POS_inicial2}
+}
+\subfigure{b)
+
+\includegraphics[width=1.5 in]{POS/2-pos_ingre_1_a.png}
+\label{POS_ingresso_1}
+}
+\subfigure{c)
+
+\includegraphics[width=1.5 in]{POS/2-pos_ingre_11_a.png}
+\label{POS_ingresso_2}
+}
+\\
+\subfigure{d)
+
+\includegraphics[width=1.5 in]{POS/4-pos_ingr_3_a.png}
+\label{POS_ingresso_3}
+}
+\subfigure{e)
+
+\includegraphics[width=1.5 in]{POS/5-pos_ingr_4_a.png}
+\label{POS_ingresso_4}
+}
+\caption{Figura do processo de venda de um ingresso. }
+\label{pos_venda_ingresso}
+\end{figure}
+
+
+
+O requisito 10 e 11 do software que é de imprimir relatórios, e este está descrito no processo da figura \ref{POS_rela}:
+
+Diagrama sequencial na máquina POS, demostrando os protótipos dos requisitos 10 e 11 de impressão de relatórios. \ref{POS_inicial3} Tela inicial do software. \ref{POS_rela_1} Selecionada a opção Relatório, mostra as opções disponíveis. \ref{POS_rela_2} Nesta tela, você pode ver relatório do evento, que é descrição sobre informações do contratante e código secreto. Na opção Vendas, você tem um relatório completo das vendas dos ingressos e a receita. 
+
+\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=1.5 in]{POS/1-Tela_pos_1_a.png}
+\label{POS_inicial3}
+}
+\subfigure{b)
+
+\includegraphics[width=1.5 in]{POS/7-pos_rela_1_a.png}
+\label{POS_rela_1}
+}
+\subfigure{c)
+
+\includegraphics[width=1.5 in]{POS/8-pos_rela_2_a.png}
+\label{POS_rela_2}
+}
+
+\caption{Figura do processo de impressão de relatórios}
+\label{POS_rela}
+\end{figure}
+
+Os requisitos 4, 5, 6, 7 são as opções de configurações, que está sendo mostrado na figura \ref{pos_config}:
+
+Tela da máquina POS mostrando as opções de configurações \ref{POS_inicial} Tela inicial do software. \ref{POS_config_1} Selecionada a opção Configurações, mostra as opções disponíveis, neste também contempla os requisitos não funcionais 1 e 2.
+
+\begin{figure}
+\centering
+\subfigure{a)
+\includegraphics[width=1.5 in]{POS/1-Tela_pos_1_a.png}
+\label{POS_inicial}
+}
+\subfigure{b)
+
+\includegraphics[width=1.5 in]{POS/6-pos_conf_a.png}
+\label{POS_config_1}
+}
+
+\caption{Figura do processo de configuração. }
+\label{pos_config}
+\end{figure}
+
+
+Esta métrica separa o software em partes a partir do seus requisitos funcionais e divide para facilitar a estimativa. A seguir são apresentadas as categorias:
+
+ \begin{itemize}
+   \item \textbf{Arquivos Lógicos Internos(ALI)}: armazenam dados mantidos pelo software
+   			\begin{itemize}
+   				\item Tabelas que armazenam dados mantidos pelo software;
+   				\item Arquivos de configuração;
+   				\item Arquivos de segurança de acesso ao software;
+ 			\end{itemize}
+ 			
+   \item \textbf{Arquivos de Interface Externa(AIE)}: é um ALI de outro sistema com o qual o software deve comunicar.
+   			 \begin{itemize}
+  				 \item Arquivo de referência externa utilizado pelo software (uma tabela do banco de dados de outro sistema)
+   				
+ 			\end{itemize}
+ 			
+ 	  \item \textbf{Entradas Externas (EE)}: Trata-se de um processo que trabalha com dados ou informações de controle que vêm do lado de fora da fronteira do software.
+ 	     		\begin{itemize}
+  				 \item Intenção de manter um ou mais ALIs.
+   				
+ 			\end{itemize}
+ 			
+ 	  \item  \textbf{Saídas Externas (SE)}: trata-se de um processo que envia dados ou informações de controle para fora da fronteira do software.
+ 	  
+ 	  		\begin{itemize}
+  				 \item Sua lógica de processamento deve conter ao menos uma fórmula matemática ou cálculo, ou criar dados derivados.
+   				
+ 			\end{itemize}
+ 			
+ 	\item \textbf{Consultas externas(CE)}: é um tipo de SE, porém seu processamento não deve conter fórmula matemática ou cálculo, nem gerar dados derivados.
+
+ 	  		\begin{itemize}
+  				 \item Recuperação de dados ou informações de controle.
+   				
+ 			\end{itemize}
+ \end{itemize}
+
+
+	
+	
+	Cada parte da métrica de pontos por função, tem uma escala conforme os ALIs e a quantidade de atributos referenciados utilizados em cada tela do protótipo, sendo feita esta contagem define-se a complexidade da tela, sendo categorizadas como, simples, média ou complexa. A figura \ref{pos_venda_ingresso2} ilustra uma tabela de referencia para esta categorização. Na figura \ref{pontos_fun_1} contém a tabela referente a contagem de atributos de ALI e AIE, já na tabela da figura \ref{pontos_fun_2} contém a referencias para a contagem de CE, EE, SE. 
+	
+	
+	
+	\begin{figure}[h!]
+\centering
+\subfigure{a)
+\includegraphics[width=3.5 in]{POS/pontos_fun_ali_aie.png}
+\label{pontos_fun_1}
+}
+\subfigure{b)
+
+\includegraphics[width=3.5 in]{POS/pontos_fun_ce.png}
+\label{pontos_fun_2}
+}
+
+
+\caption{Na figura \subref{pontos_fun_1} contém a tabela referente a contagem de atributos de ALI e AIE, já na tabela da figura \subref{pontos_fun_2} contém a referencia para a contagem de CE, EE, SE \cite{pressman2009engenharia}.  }
+\label{pos_venda_ingresso2}
+\end{figure}
+
+
+
+
+
+Após o levantamento dos requisitos junto a empresa, conseguimos definir os ALIs, EEs, SEs e CEs e estes estão na figura \ref{POS_alis}, nesta tabela da figura \ref{pontos_fun_final_2} onde tem valores padrões do mercado segundo Pressman  \cite{pressman2009engenharia}, assim eu consigo definir o total de pontos por função não-ajustados. Já na parte restrições impostas à funcionalidade do software, são pontos calculados a partir de requisitos não funcionais.
+Na parte inferior temos os total de pontos por função ajustados, onde está o total necessário de pontos por função para criar o software. O índice de produtividade, foi definido como sendo 6.5 pessoa-mês \cite{pressman2009engenharia} e o custo mês de uma pessoa, conseguimos encontrar o valor do software em R\$ 21,421,00. Estipulando que trabalhará apenas dois programadores, conseguimos definir que em 69.62 / (6.5 * 2 ) = 5.35, um pouco mais do que 5 meses para a conclusão do software.
+
+\begin{figure}[h!]
+\centering
+
+\includegraphics[width=6.6 in]{POS/pontos_fun_ali.png}
+\label{POS_alis}
+
+
+e
+\caption{Figura mostrando todas as partes da métrica identificadas pela prototipação e pelos requisitos. }
+\label{POS_alis}
+\end{figure}
+
+
+
+
+\begin{figure}[h!]
+\centering
+
+\includegraphics[width=6.6 in]{POS/pontos_fun_final_2.png}
+\label{pontos_fun_final_2}
+
+
+
+\caption{Tabela final com os dados pela métrica pontos por função }
+\label{pontos_fun_final_2}
+\end{figure}e
+
+
+
+	Já desenvolvendo o software, conseguimos encontrar máquinas POS por até R\$ 500,00. Analisando em um período de 12 meses, onde na nossa estimativa será de 2 programadores, então durante 6 meses será apenas de desenvolvimento e a partir disso comprar as máquinas POS. Conforme conversas com a empresa, ideal é adquirir três máquinas. Na tabela abaixo, está a comparação dos gastos da empresa em 12 meses para cada interversão possível:
+	
+	
+\begin{table}[h!]
+\centering
+\begin{tabular}{cc}
+\hline \hline
+Solução & Gasto total em 12 meses   \\
+\hline
+%\hline $c_0$ & $3\times 10^8$ m/s & speed of light \\
+\hline Empresa 1 & R\$ 19.800 mil      \\  
+\hline Empresa 2 & R\$ 20.000 mil    \\  
+\hline Desenvolvimento & R\$ 22.921 mil   \\  
+\hline
+\hline
+\end{tabular}
+\caption{Tabela com os valores das soluções prontas.}
+\label{comparacao}
+\end{table}
+
+
+Como o desenvolvimento tem um melhor retorno a longo prazo, fizemos uma comparação em 36 meses na tabela \ref{comparacao44}:
+
+	\begin{table}[h!]
+\centering
+\begin{tabular}{cc}
+\hline \hline
+Solução & Gasto total em 36 meses   \\
+\hline
+%\hline $c_0$ & $3\times 10^8$ m/s & speed of light \\
+\hline Empresa 1 & R\$ 41.400 mil      \\  
+\hline Empresa 2 & R\$ 39.200 mil    \\  
+\hline Desenvolvimento & R\$ 22.921 mil   \\  
+\hline
+\hline
+\end{tabular}
+\caption{Tabela com os valores das soluções prontas.}
+\label{comparacao44}
+\end{table}		
+
+
+Optando pelo desenvolvimento, a empresa ficará sem nenhum retorno por 6 meses e a partir disso começar a faturar. Já com a solução comercial, pode-se faturar a partir do primeiro mês. O desenvolvimento mostra ser muito mais vantajoso principalmente financeiro e caso a empresa expanda bastante, o custo de replicação é bem abaixo de uma solução comercial.
+
+\section{Planejamento da Avaliação da Proposta}
+
+A avaliação se dará a partir do projeto de software, que será acompanhado através da metodologia ágil \textit{Scrum}. \textit{Scrum} é uma metodologia para gestão e planejamento de projetos de software. Nela são entregues partes do software em um período. Cada período é chamado de \textit{sprint}. No caso deste projeto, os \textit{sprints} serão de duas semanas em cada um deles deve ser entregue uma parte do software definido no projeto. Estas partes são definidas como uma lista priorizada de tarefas a serem entregues. Comparar-se-á as atividades do \textit{sprint} para avaliar a conclusão do desenvolvimento do software. De acordo com o cronograma de quase 6 meses, haverá um total de 15 \textit{sprints}, considerando uma margem de erro de 30\%. Com isso após estes 15 \textit{sprints} o sistema deverá ter sido concluído.
+
+
+Para avaliar o software final implementado, iremos utilizar o  Goal/Question/Metric(GQM) \cite{FONTOURA} que consiste em uma abordagem orientada a metas e utilizada em engenharia de software para a medição de produtos e processos de software. Segundo a técnica, consideramos o seguintes objetivo, questões e métricas: 
+
+   			\begin{itemize}
+   				\item \textbf{Objetivo}: verificar se o software foi elaborado cumprindo o prazo estipulado pelo cronograma de \textit{sprints} e se atendeu os objetivos da empresa, isto é, os requisitos funcionais.
+   				\item \textbf{Questões}: 
+   				   			\begin{itemize}
+   				\item O projeto foi concluído no tempo definido pelo prazo estipulado?
+   				\item O projeto satisfaz os requisitos elicitados no projeto do software?
+
+ 			\end{itemize}
+   				\item Métricas:
+   		\begin{itemize}
+   				\item \#MTR1: Questionário para os \textit{stakeholders} de 0 a 10 sobre as entregas no prazo de cada \textit{sprint}.
+   				\item \#MTR2: Questionário para os \textit{stakeholders} de 0 a 10 sobre a satisfação de todos os requisitos pelo software.
+
+ 			\end{itemize}
+ 			\end{itemize}
+
+	
+	Interpretação das métricas: caso \#MTR1 + \#MTR2 seja maior que 8, como definido com o proprietário da empresa, ambas com significância mínima acima de 95\%, pode-se afirmar que a proposta atinge os objetivos definidos, atendendo os requisitos da empresa e entregando o produto dentro do seu prazo estipulado.
+
+\section{Relato das Atividades Desenvolvidas e Experiências Vivenciadas}
+
+O estágio realizado na empresa Telvo Sistemas Computacionais teve como principal problema o detalhamento do mercado que a empresa quer se inserir, a empresa é uma startup, assim algumas vezes estavam sem tempo para me responder perguntas ou detalhar melhor os detalhes do que era necessário.
+Para encontrar este problema foi realizado várias reuniões com o proprietário da empresa, Lucas Campos, com o intuito de coletar os principais problemas enfrentados pela empresa, para assim apontar e propor uma solução para o problema mais relevante. Após, eu voltei aos livros utilizados nas disciplinas de engenharia de software e projeto de software para revisão o conteúdo aprendido e aplica-lo no que foi descrito na proposta de intervenção.
+Após a apresentação do relatório ao proprietário, o mesmo considerou o desenvolvimento do software e sugeriu alguns aprimoramentos nos requisitos para além da venda dos ingressos, a máquina POS pode incrementar a funcionalidade de compra a partir de cartão de crédito ou débito.
+
+
+
+ 
+
+%\begin{figure}
+%\centering
+%\subfigure{a)
+%\includegraphics[width=1.9 in]{figuras/SMScopy.pdf}
+%\label{SMScopy}
+%}
+%\subfigure{b)
+%
+%\includegraphics[width=1.6 in]{figuras/deltaxy.pdf}
+%\label{deltax}
+%}
+%\caption{\subref{SMScopy} Diagrama esquemático para a estrutura do sensor SMS. A fibra SMF são as extremidades verdes, a fibra MMF é o retângulo azul / vermelho de comprimento $L$, onde a parte vermelha é o comprimento aquecido $r$.\subref{deltax} Ilustração do desalinhamento transversal entre as duas fibras no plano $xy$. O pequeno circulo vermelho (raio $a$) é o núcleo da fibra SMF e o grande circulo azul (raio $b$)  é o núcleo da fibra MMF. O deslocamento entre as duas fibras é $\vec{d} = \hat{i}\Delta x + \hat{j}\Delta y $.}
+%\label{modelo}
+%\end{figure}
+
+
+
+
+%\subsection{aa aa}
+
+
+
+
+
+
+
+
+%
+%\begin{figure}[h!]
+%\centering
+%\subfigure{a)
+%\includegraphics[width=1.4 in]{figuras/E1.pdf}
+%\label{E1}
+%}
+%\subfigure{b)
+%\includegraphics[width=1.4 in]{figuras/E2.pdf}
+%\label{E2}
+%}
+%\subfigure{c)
+%\includegraphics[width=1.4 in]{figuras/E3.pdf}
+%\label{E3}
+%} \\
+%\subfigure{d)
+%\includegraphics[width=1.4 in]{figuras/E4.pdf}
+%\label{E4}
+%} 
+%\subfigure{e)
+%\includegraphics[width=1.4 in]{figuras/E5.pdf}
+%\label{E5}
+%}
+%\subfigure{f)
+%\includegraphics[width=1.4 in]{figuras/E6.pdf}
+%\label{E6}
+%}
+%\caption{Gráfico de $E_i(x,y)$. \subref{E1} LP01 modo $E_1$ com $\Delta x=$ 15 $\mu$m e $\Delta y=$ 10 $\mu$m . \subref{E2} LP01 modo $E_2$. \subref{E3} LP11 modo $E_3$. \subref{E4} LP21 modo $E_4$. \subref{E5} LP02 modo $E_5$. \subref{E6} LP31 modo $E_6$.}
+%\label{ModosE}
+%\end{figure}
+
+
+
+%
+%\section{Conclusões}
+%
+%bla bla
+%
+%
+%\begin{appendices}
+%
+%
+%\section{aaa de aa} \label{eqsmaxwell}
+%
+%asdasdasd
+%
+%
+%
+
+
+
+
+
+%
+%\subsection{bla bla} \label{codigo_inte}
+%%Este código é usado para calcular o método de integração de Simpson em 2D. Ele usa o pacote Bolstad2.
+%%\lstinputlisting{simp2D.R}
+%\end{appendices}
+%
+%
+\begin{thebibliography}{9}
+
+
+
+\bibitem{tapscott} Tapscott, D, and Caston, Art. \textit{Mudança de paradigma: a nova promessa da tecnologia da informação}. São Paulo: Makron-McGraw-Hill (1995).
+
+\bibitem{walton} Walton, Richard E. \textit{Tecnologia de informação: o uso de TI pelas empresas que obtêm vantagem competitiva}. Atlas, 1994.
+
+\bibitem{xavier}Xavier, W. S., and Martins, G. S.. \textit{FORTALECENDO EMPREENDIMENTOS EM TI: QUAL A CONTRIBUIÇÃO DAS INCUBADORAS?}. Journal of Information Systems and Technology Management: JISTEM, 5(3), 433 (2008).
+
+\bibitem{tanebaum} Steen, M. van, Tanenbaum, A. S,  \textit{Distributed systems: principles and paradigms}. Pearson Prentice Hall, (2007).
+
+\bibitem{perin} Perin, B. \textit{A Revolução das Startups-O Novo Mundo do Empreendedorismo de Alto Impacto}. Alta Books Editora.
+
+\bibitem{eventos} Como crescer no mercado de eventos em época de crise http://www.abeoc.org.br/2015/04/como-crescer-no-mercado-de-eventos-em-epoca-de-crise/
+
+\bibitem{pressman2009engenharia} Pressman, R. S. \textit{Engenharia de software}. AMGH Editora, 2009
+
+\bibitem{FONTOURA} FONTOURA M.Sc, LISANDRA M, et. Al, \textit{Usando GQM para Gerenciar Riscos
+em Projetos de Software}. Ed. UFRS, 2004.
+
+
+%\bibitem{API2} S. M. Grisotto, A. Grisotto, and J.-P. Grisotto,  \textit{Artigo sobre a familia grisotto, haha}. Jornal da familia, \href{10.1109/JLT.2008.200883123}{\textbf{27} (2015) 31348-2356}.
+
+
+
+
+
+\end{thebibliography}
+
+\end{document}
